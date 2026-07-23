@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Maroun Abboud Public High School, Aley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Space+Grotesk:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-1.css">
+<style>
+  /* =============================================================
+     Services page — custom styles
+     ============================================================= */
+
+  /* ---------- Hero ---------- */
+  .services-hero{
+    position:relative;
+    min-height: clamp(440px, 82vh, 760px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    color:#FFFFFF;
+    background:linear-gradient(135deg, #0a2b1c 0%, #1C6B3B 40%, #2E7D32 70%, #0F3D26 100%);
+  }
+  .services-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    z-index:1;
+  }
+  .services-hero .hero-inner{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:clamp(2rem, 5vw, 3rem);
+  }
+  .services-hero h1{
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:clamp(2rem, 4.8vw, 3.4rem);
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    margin-bottom:0.8rem;
+  }
+  .services-hero .hero-lede{
+    font-family:'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:clamp(0.95rem, 1.4vw, 1.1rem);
+    color:#DCE3D9;
+    max-width:36rem;
+    margin:0 auto;
+    line-height:1.6;
+  }
+  .services-hero .hero-badge{
+    display:inline-block;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:#DFBA73;
+    border:1px solid rgba(223,186,115,0.3);
+    padding:0.35rem 1rem;
+    border-radius:20px;
+    margin-bottom:1.2rem;
+  }
+
+  /* ---------- Section shell ---------- */
+  .services-section{
+    padding:clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+    max-width:78rem;
+    margin:0 auto;
+  }
+  .services-section .section-head{
+    max-width:36rem;
+    margin-bottom:2.5rem;
+  }
+  .services-section .section-head.center{margin-inline:auto;text-align:center;}
+  .services-section .section-head h2{
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:clamp(1.6rem, 3vw, 2.2rem);
+    color:#0F3D26;
+    margin-top:0.4rem;
+    line-height:1.2;
+  }
+  .services-section .section-head p{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.95rem;
+    color:#4B4A44;
+    margin-top:0.7rem;
+    line-height:1.6;
+  }
+
+  /* ---------- Section divider ---------- */
+  .section-divider{
+    width:50px;
+    height:2px;
+    background:linear-gradient(90deg, #C41E2A, #1C6B3B);
+    margin:0 auto 0.4rem;
+  }
+
+  /* ---------- Overview cards (3 service cards) ---------- */
+  .service-overview-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  @media(min-width:640px){
+    .service-overview-grid{grid-template-columns:1fr 1fr 1fr;}
+  }
+  .service-overview-card{
+    background:#FFFFFF;
+    border:1px solid #E2DBC7;
+    border-radius:12px;
+    padding:2rem 1.6rem;
+    text-align:center;
+    transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .service-overview-card::after{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height:4px;
+    transition:height 0.3s ease;
+  }
+  .service-overview-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px -18px rgba(20,42,34,0.3);
+  }
+  .service-overview-card:hover::after{height:6px;}
+  .service-overview-card.library::after{background:linear-gradient(90deg, #1C6B3B, #2E7D32);}
+  .service-overview-card.clinic::after{background:linear-gradient(90deg, #C41E2A, #E53935);}
+  .service-overview-card.sports::after{background:linear-gradient(90deg, #B8860B, #F9A825);}
+
+  .service-overview-card .srv-icon{
+    width:56px;
+    height:56px;
+    border-radius:14px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.6rem;
+    margin-bottom:1rem;
+  }
+  .service-overview-card.library .srv-icon{background:#E8F5E9;color:#1C6B3B;}
+  .service-overview-card.clinic .srv-icon{background:#FFEBEE;color:#C41E2A;}
+  .service-overview-card.sports .srv-icon{background:#FFF8E1;color:#B8860B;}
+
+  .service-overview-card h3{
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:1.1rem;
+    color:#1C1B18;
+    margin-bottom:0.5rem;
+  }
+  .service-overview-card p{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.9rem;
+    color:#4B4A44;
+    line-height:1.55;
+  }
+
+  /* ---------- Service detail section ---------- */
+  .srv-detail{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2rem;
+    margin-bottom:3rem;
+    padding:2rem;
+    border-radius:14px;
+    background:#FFFFFF;
+    border:1px solid #E2DBC7;
+    transition:box-shadow 0.3s ease;
+  }
+  .srv-detail:hover{box-shadow:0 16px 32px -20px rgba(20,42,34,0.25);}
+  @media(min-width:860px){
+    .srv-detail{grid-template-columns:1fr 1fr;}
+  }
+  .srv-detail:last-child{margin-bottom:0;}
+
+  .srv-detail .srv-info{}
+  .srv-detail .srv-info .srv-heading{
+    display:flex;
+    align-items:center;
+    gap:0.8rem;
+    margin-bottom:1rem;
+  }
+  .srv-detail .srv-info .srv-heading .srv-big-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    flex-shrink:0;
+  }
+  .srv-detail.library .srv-heading .srv-big-icon{background:#E8F5E9;color:#1C6B3B;}
+  .srv-detail.clinic .srv-heading .srv-big-icon{background:#FFEBEE;color:#C41E2A;}
+  .srv-detail.sports .srv-heading .srv-big-icon{background:#FFF8E1;color:#B8860B;}
+
+  .srv-detail .srv-info .srv-heading h3{
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:1.25rem;
+    color:#1C1B18;
+  }
+
+
+
+
+  .srv-detail .srv-info > p{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.95rem;
+    color:#4B4A44;
+    line-height:1.65;
+    margin-bottom:1.2rem;
+  }
+  .srv-detail .srv-info .srv-tag{
+    display:inline-block;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:0.25rem 0.8rem;
+    border-radius:12px;
+    margin-bottom:0.8rem;
+  }
+  .srv-detail.library .srv-tag{background:#E8F5E9;color:#1C6B3B;}
+  .srv-detail.clinic .srv-tag{background:#FFEBEE;color:#C41E2A;}
+  .srv-detail.sports .srv-tag{background:#FFF8E1;color:#B8860B;}
+
+  /* ---------- Feature list grid ---------- */
+  .srv-features{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0.7rem;
+  }
+  @media(min-width:560px){
+    .srv-features{grid-template-columns:1fr 1fr;}
+  }
+  .srv-feature-item{
+    display:flex;
+    align-items:flex-start;
+    gap:0.7rem;
+    padding:0.7rem 0.9rem;
+    border-radius:8px;
+    background:#F9F8F3;
+    transition:transform 0.2s ease, background 0.2s ease;
+  }
+  .srv-feature-item:hover{
+    transform:translateX(3px);
+    background:#F0EDE3;
+  }
+  .srv-feature-item .ft-icon{
+    font-size:1.15rem;
+    flex-shrink:0;
+    margin-top:0.05rem;
+  }
+  .srv-feature-item .ft-text{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.88rem;
+    color:#3A3A35;
+    line-height:1.4;
+  }
+
+  /* ---------- Highlight / goal box ---------- */
+  .srv-goal{
+    background:linear-gradient(135deg, #0F3D26, #1C6B3B);
+    border-radius:12px;
+    padding:1.8rem 2rem;
+    color:#FFFFFF;
+    max-width:38rem;
+    margin:1.5rem auto 0;
+    text-align:center;
+    position:relative;
+  }
+  .srv-goal::before{
+    content:"🎯";
+    font-size:1.8rem;
+    display:block;
+    margin-bottom:0.5rem;
+  }
+  .srv-goal h4{
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:1rem;
+    margin-bottom:0.4rem;
+  }
+  .srv-goal p{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.9rem;
+    color:#DCE3D9;
+    line-height:1.6;
+  }
+
+  /* ---------- Note / alert box ---------- */
+  .srv-note{
+    background:#FFFFFF;
+    border-left:4px solid #C41E2A;
+    border-radius:0 10px 10px 0;
+    padding:1.2rem 1.5rem;
+    margin-top:1.5rem;
+    display:flex;
+    align-items:flex-start;
+    gap:0.8rem;
+    box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  }
+  .srv-note .note-icon{
+    font-size:1.4rem;
+    flex-shrink:0;
+    margin-top:0.1rem;
+  }
+  .srv-note .note-text{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.92rem;
+    color:#4B4A44;
+    line-height:1.6;
+  }
+  .srv-note .note-text strong{color:#1C1B18;}
+
+  /* ---------- Sub-section divider ---------- */
+  .srv-subhead{
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    margin:1.5rem 0 1rem;
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:1.05rem;
+    color:#0F3D26;
+  }
+  .srv-subhead .sub-icon{font-size:1.2rem;}
+
+  /* ---------- Quick jump nav ---------- */
+  .quick-nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:0.8rem;
+    max-width:44rem;
+    margin:0 auto 2.5rem;
+  }
+  .quick-nav a{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.8rem;
+    font-weight:500;
+    letter-spacing:0.04em;
+    padding:0.5rem 1.2rem;
+    border-radius:20px;
+    background:#FFFFFF;
+    border:1px solid #E2DBC7;
+    color:#4B4A44;
+    transition:all 0.25s ease;
+    display:flex;
+    align-items:center;
+    gap:0.4rem;
+  }
+  .quick-nav a:hover{
+    background:#0F3D26;
+    color:#FFFFFF;
+    border-color:#0F3D26;
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px rgba(15,61,38,0.15);
+  }
+  .quick-nav a .q-icon{font-size:1rem;}
+
+  /* ---------- Responsive tweaks ---------- */
+  @media(min-width:860px){
+    .srv-detail.reverse .srv-features-wrap{order:-1;}
+  }
+
+  /* ---------- Closing tweaks ---------- */
+  .closing.services-closing{
+    background:linear-gradient(135deg, #0F3D26, #1a5a37);
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== Header ==================== -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
+        MAOSS <em>·</em> Aley
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academic.html">Academics</a>
+        <a href="admission.html">Admissions</a>
+        <a href="students.html">Students</a>
+        <a href="parent.html">Parents</a>
+        <a href="news.html">News &amp; Events</a>
+        <a href="staff.html">Staff</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <div class="nav-panel" id="navPanel" aria-hidden="true">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academic.html">Academics</a>
+      <a href="admission.html">Admissions</a>
+      <a href="students.html">Students</a>
+      <a href="parent.html">Parents</a>
+      <a href="news.html">News &amp; Events</a>
+      <a href="staff.html">Staff</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ==================== Hero ==================== -->
+  <section class="services-hero">
+    <div class="hero-inner">
+      <span class="hero-badge">Our Facilities</span>
+      <h1>School Services</h1>
+      <p class="hero-lede">Maroun Abboud Secondary School (MAOSS) — Aley provides a comprehensive range of services designed to support students' academic development, health, and personal growth beyond the classroom.</p>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION — Service Overview
+       ============================================================= -->
+  <section class="services-section">
+    <div class="section-head center">
+      <div class="section-divider"></div>
+      <p class="eyebrow">What We Offer</p>
+      <h2>🌟 Comprehensive Support for Every Student</h2>
+      <p>From academic resources to health care and extracurricular development — we are committed to nurturing the whole student.</p>
+    </div>
+
+    <div class="quick-nav">
+      <a href="#library"><span class="q-icon">📚</span> Library</a>
+      <a href="#clinic"><span class="q-icon">🏥</span> Medical Clinic</a>
+      <a href="#sports"><span class="q-icon">🏀</span> Sports &amp; Activities</a>
+    </div>
+
+    <div class="service-overview-grid">
+      <div class="service-overview-card library">
+        <div class="srv-icon">📚</div>
+        <h3>School Library</h3>
+        <p>A quiet, resource-rich space supporting academic research, reading culture, and independent study.</p>
+      </div>
+      <div class="service-overview-card clinic">
+        <div class="srv-icon">🏥</div>
+        <h3>Medical Clinic</h3>
+        <p>On-site health services ensuring the safety and well-being of every student during school hours.</p>
+      </div>
+      <div class="service-overview-card sports">
+        <div class="srv-icon">🏀</div>
+        <h3>Sports &amp; Activities</h3>
+        <p>Extracurricular programs that build teamwork, creativity, leadership, and physical fitness.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION — School Library
+       ============================================================= -->
+  <section class="services-section" id="library" style="padding-top:0;">
+    <div class="srv-detail library">
+      <div class="srv-info">
+        <span class="srv-tag">Learning Resource Center</span>
+        <div class="srv-heading">
+          <div class="srv-big-icon">📚</div>
+          <h3>School Library</h3>
+        </div>
+        <p>Maroun Abboud Secondary School (MASS) — Aley, the school library is a key learning space that supports students' academic growth, reading culture, and independent learning.</p>
+
+        <div class="srv-subhead"><span class="sub-icon">📖</span> About the Library</div>
+        <p>Our library provides a quiet and comfortable environment where students can study, read, and explore a wide range of educational resources.</p>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">📚</span><span class="ft-text">Rich collection of books and references</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧠</span><span class="ft-text">Academic resources for all subjects</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🪑</span><span class="ft-text">Quiet study area for students</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">💻</span><span class="ft-text">Support for research and assignments</span></div>
+        </div>
+
+        <div class="srv-subhead"><span class="sub-icon">📘</span> Available Resources</div>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">📖</span><span class="ft-text">Storybooks and novels</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">📚</span><span class="ft-text">Academic textbooks and guides</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🌍</span><span class="ft-text">Encyclopedias and reference books</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">💻</span><span class="ft-text">Digital learning materials (if available)</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="srv-subhead"><span class="sub-icon">🧑‍🏫</span> Library Services</div>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">📖</span><span class="ft-text">Book borrowing and return system</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧠</span><span class="ft-text">Research assistance for students</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">📊</span><span class="ft-text">Study support for projects and assignments</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🏫</span><span class="ft-text">Reading sessions and activities</span></div>
+        </div>
+
+        <div class="srv-goal">
+          <h4>📌 Our Goal</h4>
+          <p>To foster a love for reading and provide every student with the resources they need to excel academically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION — Medical Clinic
+       ============================================================= -->
+  <section class="services-section" id="clinic" style="padding-top:0;">
+    <div class="srv-detail clinic reverse">
+      <div class="srv-info">
+        <span class="srv-tag">Health &amp; Safety</span>
+        <div class="srv-heading">
+          <div class="srv-big-icon">🏥</div>
+          <h3>Medical Clinic</h3>
+        </div>
+        <p>The school medical clinic is dedicated to ensuring the health, safety, and well-being of all students and staff during the school day.</p>
+
+        <div class="srv-subhead"><span class="sub-icon">🧑‍⚕️</span> About the Clinic</div>
+        <p>Our clinic provides basic first aid and immediate medical attention for minor health issues and emergencies that may occur during school hours.</p>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">🏥</span><span class="ft-text">On-site medical support</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧑‍⚕️</span><span class="ft-text">First aid assistance</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🩹</span><span class="ft-text">Care for minor injuries or illness</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">📞</span><span class="ft-text">Communication with parents in case of emergencies</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="srv-subhead"><span class="sub-icon">💊</span> Services Provided</div>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">🩹</span><span class="ft-text">Wound cleaning and bandaging</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🌡️</span><span class="ft-text">Fever and basic health checks</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🤕</span><span class="ft-text">Headache and minor pain management</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧠</span><span class="ft-text">Monitoring student health conditions</span></div>
+        </div>
+
+        <div class="srv-subhead"><span class="sub-icon">📋</span> Health &amp; Safety Monitoring</div>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">🧑‍⚕️</span><span class="ft-text">Regular health supervision</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">📊</span><span class="ft-text">Tracking student health reports (if required)</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🚨</span><span class="ft-text">Emergency response procedures</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🤝</span><span class="ft-text">Coordination with parents and medical professionals</span></div>
+        </div>
+
+        <div class="srv-note">
+          <span class="note-icon">📌</span>
+          <div class="note-text"><strong>Important Note:</strong> Parents are contacted immediately in case of any serious medical situation, and students are referred to professional healthcare services when necessary.</div>
+        </div>
+
+        <div class="srv-goal">
+          <h4>🎯 Our Goal</h4>
+          <p>To ensure a safe, healthy, and supportive environment so that students can focus on learning with peace of mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION — Sports & Extracurricular Activities
+       ============================================================= -->
+  <section class="services-section" id="sports" style="padding-top:0;">
+    <div class="srv-detail sports">
+      <div class="srv-info">
+        <span class="srv-tag">Physical &amp; Creative Development</span>
+        <div class="srv-heading">
+          <div class="srv-big-icon">🏀</div>
+          <h3>Sports &amp; Extracurricular Activities</h3>
+        </div>
+        <p>Sports and extracurricular activities play an important role in developing students' physical abilities, teamwork, creativity, and leadership skills.</p>
+
+        <div class="srv-subhead"><span class="sub-icon">⚽</span> Sports Activities</div>
+        <p>We encourage students to stay active and participate in various sports programs:</p>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">⚽</span><span class="ft-text">Football matches and tournaments</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🏀</span><span class="ft-text">Basketball competitions</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🏃</span><span class="ft-text">Athletics and running events</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🤸</span><span class="ft-text">Physical education training and fitness sessions</span></div>
+        </div>
+
+        <div class="srv-subhead"><span class="sub-icon">🎭</span> Extracurricular Activities</div>
+        <p>Students are given opportunities to explore their talents beyond academics:</p>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">🎨</span><span class="ft-text">Art and drawing clubs</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🎤</span><span class="ft-text">Music and singing activities</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🎭</span><span class="ft-text">Drama and school performances</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧠</span><span class="ft-text">Educational clubs and competitions</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="srv-subhead"><span class="sub-icon">🏆</span> School Competitions</div>
+        <p style="font-family:Montserrat, sans-serif;">We organize and participate in competitions to motivate students:</p>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">🥇</span><span class="ft-text">Inter-class sports competitions</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧪</span><span class="ft-text">Science and academic contests</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">📝</span><span class="ft-text">Writing and language competitions</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🎨</span><span class="ft-text">Creative arts exhibitions</span></div>
+        </div>
+
+        <div class="srv-subhead"><span class="sub-icon">🤝</span> Benefits for Students</div>
+        <div class="srv-features">
+          <div class="srv-feature-item"><span class="ft-icon">💪</span><span class="ft-text">Build confidence and self-discipline</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🧠</span><span class="ft-text">Improve teamwork and communication skills</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🌟</span><span class="ft-text">Discover talents and personal interests</span></div>
+          <div class="srv-feature-item"><span class="ft-icon">🏫</span><span class="ft-text">Enjoy a balanced and healthy school life</span></div>
+        </div>
+
+        <div class="srv-goal">
+          <h4>📌 Our Goal</h4>
+          <p>To create a dynamic school environment where students can grow physically, mentally, and socially while enjoying their school experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       CLOSING
+       ============================================================= -->
+  <section class="closing services-closing">
+    <div class="closing-inner">
+      <blockquote>At MAOSS, we believe that education extends beyond the classroom. Our services are designed to support every aspect of a student's journey — mind, body, and spirit.</blockquote>
+      <p class="signoff">MAOSS Services Team<span>Maroun Abboud Public High School, Aley</span></p>
+    </div>
+  </section>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
+          MAOSS <em>·</em> Aley
+        </a>
+        <p>Maroun Abboud Public High School — committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="academic.html">Academics</a>
+          <a href="admission.html">Admissions</a>
+          <a href="students.html">Students</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <nav>
+          <a href="news.html">News &amp; Events</a>
+          <a href="parent.html">Parents</a>
+          <a href="staff.html">Staff</a>
+          <a href="services.html">Services</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Maroun Abboud Public High School (MAOSS) — Aley, Lebanon. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
