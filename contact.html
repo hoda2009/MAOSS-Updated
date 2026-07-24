@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Maroun Abboud Public High School, Aley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-1.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>(function(){emailjs.init({publicKey:"4X0bmsMTRTG6kJehV"})})();</script>
+</head>
+<body>
+<header class="site-header"><div class="nav-inner"><a class="brand" href="index.html"><img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest"> MAOSS <em>.</em> Aley</a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="academic.html">Academics</a><a href="admission.html">Admissions</a><a href="students.html">Students</a><a href="parent.html">Parents</a><a href="news.html">News &amp; Events</a><a href="staff.html">Staff</a><a href="services.html">Services</a><a href="contact.html" class="active">Contact</a></nav><button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu"><span></span><span></span><span></span></button></div></header>
+<div class="nav-backdrop" id="navBackdrop"></div>
+<div class="nav-panel" id="navPanel" aria-hidden="true"><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="academic.html">Academics</a><a href="admission.html">Admissions</a><a href="students.html">Students</a><a href="parent.html">Parents</a><a href="news.html">News &amp; Events</a><a href="staff.html">Staff</a><a href="services.html">Services</a><a href="contact.html" class="active">Contact</a></nav></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-contact">
+  <div class="hero-inner">
+    <div class="stars" aria-hidden="true"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+    <p class="eyebrow">Get in Touch</p>
+    <h1>Contact Us</h1>
+    <div class="intro-stars" aria-hidden="true">⭐ ⭐ ⭐</div>
+    <p class="hero-lede">We are always happy to hear from you. Feel free to contact us for any inquiries, support, or additional information about our school and services.</p>
+  </div>
+</section>
+
+<!-- ===== FORM + CONTACT INFO ===== -->
+<section class="block">
+  <div class="contact-split">
+    <div class="contact-form-wrapper">
+      <div class="form-header">
+        <div class="form-header-stars" aria-hidden="true">⭐ ⭐ ⭐</div>
+        <h3>Send Us a Message</h3>
+        <p>We would love to hear from you. Fill out the form and we will respond promptly.</p>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="formName"><span class="label-icon">👤</span> Full Name <span class="required">*</span></label>
+            <input type="text" id="formName" name="name" placeholder="Your full name" required autocomplete="name">
+            <span class="form-error" id="nameError">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="formEmail"><span class="label-icon">✉️</span> Email Address <span class="required">*</span></label>
+            <input type="email" id="formEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+            <span class="form-error" id="emailError">Please enter a valid email address.</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="formPhone"><span class="label-icon">📞</span> Phone Number</label>
+            <input type="tel" id="formPhone" name="phone" placeholder="+961 XX XXX XXX" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="formSubject"><span class="label-icon">📌</span> Subject <span class="required">*</span></label>
+            <select id="formSubject" name="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="general">General Inquiry</option>
+              <option value="admissions">Admissions</option>
+              <option value="academic">Academic Information</option>
+              <option value="support">Support</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="form-error" id="subjectError">Please select a subject.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="formMessage"><span class="label-icon">💬</span> Message <span class="required">*</span></label>
+          <textarea id="formMessage" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+          <span class="form-error" id="messageError">Please enter your message.</span>
+        </div>
+        <button type="submit" class="form-submit">
+          <span class="submit-stars" aria-hidden="true">⭐</span>
+          <span class="submit-text">Send Message</span>
+          <span class="submit-icon">→</span>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <span class="success-icon">✓</span>
+          <span>Thank you! Your message has been sent successfully. We will get back to you shortly.</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info-wrapper">
+      <div class="contact-info-card">
+        <div class="contact-info-icon">📍</div>
+        <div class="contact-info-content">
+          <h4>Address</h4>
+          <p>Aley, Lebanon</p>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">📞</div>
+        <div class="contact-info-content">
+          <h4>Phone</h4>
+          <p><a href="tel:+96125554725">25/554725</a></p>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">✉️</div>
+        <div class="contact-info-content">
+          <h4>Email</h4>
+          <p><a href="mailto:info.maossaley@gmail.com">info.maossaley@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">🕐</div>
+        <div class="contact-info-content">
+          <h4>School Hours</h4>
+          <p>Monday - Friday<br>7:30 AM - 2:30 PM</p>
+        </div>
+      </div>
+      <div class="contact-info-card contact-info-card-starred">
+        <div class="contact-info-icon">⭐</div>
+        <div class="contact-info-content">
+          <h4>We are Here to Help</h4>
+          <p>Reach out anytime - we are committed to supporting you and your family.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="block">
+  <div class="block-head center">
+    <p class="eyebrow">Find Us</p>
+    <h2>Our Location</h2>
+    <div class="section-divider"></div>
+    <p>Visit our campus in the heart of Aley. We look forward to welcoming you.</p>
+  </div>
+  <div class="map-wrapper">
+    <div class="map-stars" aria-hidden="true">⭐ ⭐ ⭐</div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.2834109375412!2d35.605059975705785!3d33.80398137325147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f22d8e9db8273%3A0x483e7c614a2d2dfa!2sMaroun%20Abboud%20-%20School!5e1!3m2!1sen!2slb!4v1784894342057!5m2!1sen!2slb" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Maroun Abboud School location on Google Maps"></iframe>
+  </div>
+</section>
+
+<!-- ===== NOTES ===== -->
+<section class="block">
+  <div class="block-head center">
+    <p class="eyebrow">Additional Information</p>
+    <h2>Notes</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="note">
+    <span class="note-star" aria-hidden="true">⭐</span>
+    <strong>Visiting us?</strong> Our campus sits directly on Aley main road, which gives us a visible, central presence. For appointments or detailed inquiries, we recommend contacting us in advance by phone or email so we can ensure the right person is available to assist you. We look forward to hearing from you!
+  </div>
+</section>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="brand" href="index.html"><img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest"> MAOSS <em>.</em> Aley</a>
+<p>Maroun Abboud Public High School - committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<nav>
+<a href="index.html">Home</a><a href="about.html">About Us</a><a href="academic.html">Academics</a><a href="admission.html">Admissions</a><a href="students.html">Students</a><a href="contact.html">Contact</a>
+</nav>
+</div>
+<div class="footer-col">
+<h4>More</h4>
+<nav>
+<a href="news.html">News &amp; Events</a><a href="parent.html">Parents</a><a href="staff.html">Staff</a><a href="services.html">Services</a>
+</nav>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2026 Maroun Abboud Public High School (MAOSS) - Aley, Lebanon. All rights reserved.
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
