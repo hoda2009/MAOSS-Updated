@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maroun Abboud Public High School — Aley</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="icon" type="image/png" href="./assets/MAOSS-logo-circle.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -13,9 +14,8 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="index.html">
-        <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
-        MAOSS <em>·</em> Aley
+<a class="brand" href="index.html">
+        <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
       </a>
 
       <nav class="nav-links">
@@ -23,12 +23,14 @@
         <a href="about.html">About</a>
         <a href="academic.html">Academics</a>
         <a href="admission.html">Admissions</a>
-        <a href="students.html">Students</a>
-        <a href="parent.html">Parents</a>
+        <a href="steam.html">STEAM Lab</a>
+       
+          <a href="students.html">School Life</a>
         <a href="news.html">News &amp; Events</a>
         <a href="staff.html">Staff</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
@@ -36,7 +38,7 @@
       </button>
     </div>
   </header>
-
+<main>
   <div class="nav-backdrop" id="navBackdrop"></div>
   <div class="nav-panel" id="navPanel" aria-hidden="true">
     <nav>
@@ -44,8 +46,9 @@
       <a href="about.html">About</a>
       <a href="academic.html">Academics</a>
 <a href="admission.html">Admissions</a>
-      <a href="students.html">Students</a>
-      <a href="parent.html">Parents</a>
+      <a href="steam.html">STEAM Lab</a>
+    
+       <a href="students.html">School Life</a>
       <a href="news.html">News &amp; Events</a>
       <a href="staff.html">Staff</a>
       <a href="services.html">Services</a>
@@ -53,21 +56,65 @@
     </nav>
   </div>
 
+
   <section class="hero">
     <div class="hero-media">
-      <!-- Swap this src for your own photo. object-fit:cover means any
-           image, any aspect ratio, will fill the hero and scale correctly
-           on every screen size without distortion. -->
-      <img src="./assets/HeroSection.webp" alt="Maroun Abboud Public High School campus, Aley">
-    </div>
-    <div class="hero-inner">
-      <div class="container">
-      <p class="eyebrow">Aley &middot; Mount Lebanon</p>
-      <h1>Welcome to <span>Maroun Abboud Public High School</span></h1>
-      <p class="hero-lede">A public high school in the hills of Aley, committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
-    </div>
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="./assets/Video Project 11.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
+
+<section class="steam-hero">
+ 
+ 
+  <div class="steam-hero__content">
+ 
+    <div class="steam-hero__lede">
+      <h2 class="steam-hero__heading">MAOSS is Powered by Human Intelligence</h2>
+      <p class="steam-hero__sub">
+        Intellectual Curiosity, Student Engagement, and a Compassionate Community
+        form the foundation of our human-centered approach to learning and nowhere
+        is that more visible than in our STEAM Lab, where students build, test, and
+        learn by doing.
+      </p>
+      <a href="students.html" class="steam-hero__cta">
+        Explore Our STEAM Lab <span class="steam-hero__arrow">→</span>
+      </a>
+    </div>
+ 
+    <div class="steam-hero__divider-col">
+      <div class="steam-hero__divider-line"></div>
+    </div>
+ 
+    <div class="steam-hero__quote">
+      <hr class="steam-hero__rule">
+      <span class="steam-hero__quote-mark">&#8220;</span>
+      <p>
+        In this era of pervasive social media and technology, human interaction and
+        connection are more important than ever. At MAOSS, our
+        <span class="steam-hero__highlight">STEAM Lab</span> is where that connection
+        becomes tangible, students design, build, and troubleshoot side by side,
+        turning curiosity into something they can hold in their hands.
+      </p>
+      <div class="steam-hero__byline">
+        <span class="steam-hero__name">Dr.Sanaa Shehayeb</span><span class="steam-hero__pipe">|</span><span class="steam-hero__role">Headmistress</span>
+      </div>
+      <hr class="steam-hero__rule">
+    </div>
+ 
+  </div>
+ 
+</section>
+
+
+
+
+
+
+
+
 
   <section class="foundations">
     <div class="foundations-head">
@@ -79,7 +126,7 @@
       <div class="card">
         <p class="eyebrow">Mission</p>
         <h3>Distinguished education</h3>
-        <p>We provide high-quality education that develops every student's academic, intellectual, and personal abilities — because we believe every student carries potential worth nurturing.</p>
+        <p>We provide high-quality education that develops every student's academic, intellectual, and personal abilities because we believe every student carries potential worth nurturing.</p>
       </div>
 
       <div class="card">
@@ -91,7 +138,7 @@
       <div class="card">
         <p class="eyebrow">Character</p>
         <h3>Well-rounded students</h3>
-        <p>We raise young people who are responsible, independent, and able to think critically and creatively — with respect for others at the center of it all.</p>
+        <p>We raise young people who are responsible, independent, and able to think critically and creatively with respect for others at the center of it all.</p>
       </div>
 
       <div class="card">
@@ -103,15 +150,21 @@
       <div class="card">
         <p class="eyebrow">Beyond class</p>
         <h3>Talent and horizons</h3>
-        <p>Our students compete and create beyond the classroom — in culture, science, sport, and art — discovering talents and broadening their horizons.</p>
+        <p>Our students compete and create beyond the classroom in culture, science, sport, and art discovering talents and broadening their horizons.</p>
       </div>
 
       <div class="card">
         <p class="eyebrow">Vision</p>
         <h3>Ready for the future</h3>
-        <p>Together, we prepare a generation that is aware, educated, responsible, and peace-oriented — ready to meet the future with confidence.</p>
+        <p>Together, we prepare a generation that is aware, educated, responsible, and peace-oriented ready to meet the future with confidence.</p>
       </div>
     </div>
+    <div class="foundations-cta">
+  <a href="about.html" class="foundations-btn">
+    Discover Our Story
+    <span>→</span>
+  </a>
+</div>
   </section>
 
   <section class="closing">
@@ -121,14 +174,402 @@
     </div>
   </section>
 
+
+
+<!-- =========================================================
+     ACADEMICS PREVIEW
+     ========================================================= -->
+
+<section class="academics-preview">
+
+  <div class="academics-preview-inner">
+
+    <!-- HEADER -->
+    <div class="academics-preview-head">
+
+      <div class="academics-preview-intro">
+
+        <p class="eyebrow">Academics at MAOSS</p>
+
+        <h2>
+          Learning with purpose.<br>
+          Preparing for what comes next.
+        </h2>
+
+      </div>
+
+      <div class="academics-preview-description">
+
+        <p>
+          A rigorous academic program that combines strong foundations,
+          critical thinking, practical learning, and personal development
+          preparing students for higher education and the future beyond it.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ACADEMIC PATHWAYS -->
+    <div class="academics-pathways">
+
+
+      <!-- CARD 01 -->
+      <article class="academic-card">
+
+        <div class="academic-card-number">
+          01
+        </div>
+
+        <div class="academic-card-content">
+
+          <p class="academic-label">
+            Academic Track
+          </p>
+
+          <h3>
+            Scientific Track
+          </h3>
+
+          <p>
+            A strong foundation in Mathematics, Physics, Chemistry,
+            and Biology for students pursuing scientific, medical,
+            engineering, and technology pathways.
+          </p>
+
+          <div class="academic-subjects">
+            <span>Mathematics</span>
+            <span>Physics</span>
+            <span>Chemistry</span>
+            <span>Biology</span>
+          </div>
+
+        </div>
+
+        <div class="academic-card-line"></div>
+
+      </article>
+
+
+      <!-- CARD 02 -->
+      <article class="academic-card">
+
+        <div class="academic-card-number">
+          02
+        </div>
+
+        <div class="academic-card-content">
+
+          <p class="academic-label">
+            Academic Track
+          </p>
+
+          <h3>
+            Literary Track
+          </h3>
+
+          <p>
+            A humanities-focused pathway built around Literature,
+            Languages, Sociology, and Philosophy developing
+            communication, analysis, and critical thinking.
+          </p>
+
+          <div class="academic-subjects">
+            <span>Literature</span>
+            <span>Languages</span>
+            <span>Sociology</span>
+            <span>Philosophy</span>
+          </div>
+
+        </div>
+
+        <div class="academic-card-line"></div>
+
+      </article>
+
+
+      <!-- CARD 03 -->
+      <article class="academic-card">
+
+        <div class="academic-card-number">
+          03
+        </div>
+
+        <div class="academic-card-content">
+
+          <p class="academic-label">
+            Our Approach
+          </p>
+
+          <h3>
+            How We Learn
+          </h3>
+
+          <p>
+            Learning extends beyond textbooks through practical
+            laboratory work, digital tools, projects, collaboration,
+            and continuous assessment.
+          </p>
+
+          <div class="academic-subjects">
+            <span>Practical Labs</span>
+            <span>Digital Learning</span>
+            <span>Projects</span>
+            <span>Assessment</span>
+          </div>
+
+        </div>
+
+        <div class="academic-card-line"></div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- BOTTOM CTA -->
+    <div class="academics-preview-footer">
+
+      <div class="academics-preview-footer-text">
+        <p>
+          Discover the programs, teaching approach,
+          activities, and opportunities at MAOSS.
+        </p>
+      </div>
+
+      <a href="academic.html" class="academics-btn">
+        Explore Our Academics
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+  <section class="labs-section">
+
+  <div class="labs-head">
+    <p class="eyebrow">What makes us different</p>
+
+    <h2>Three labs that change how<br>students learn</h2>
+
+    <p class="labs-intro">
+      Every student gets lab time, not just seniors. This is where curiosity turns into something you can hold.
+    </p>
+  </div>
+
+
+  <div class="labs-grid">
+
+    <!-- CARD 1 -->
+    <div class="lab-card">
+
+      <div class="lab-image placeholder">
+         <img src="./assets/steam-lab2.jpeg" alt="Students working in a STEAM lab">
+      </div>
+
+      <div class="lab-content">
+
+        <span class="lab-label">STEAM LAB</span>
+
+        <h3>Design, build, iterate</h3>
+
+        <p>
+          3D printing, electronics benches and a maker space open after class.
+        </p>
+
+        <ul>
+          <li>Robotics &amp; mechatronics</li>
+           <li>Web development &amp; coding</li>
+          <li>Product design sprints</li>
+          <li>Annual invention showcase</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD 2 -->
+    <div class="lab-card">
+
+      <div class="lab-image placeholder">
+        <img src="./assets/sphero2.jpeg" alt="Students working with Sphero robots">
+      </div>
+
+      <div class="lab-content">
+
+        <span class="lab-label">FUTURE SPHERO</span>
+
+        <h3>Code that moves</h3>
+
+        <p>
+          A Sphero fleet where students program autonomous routes, sensors and swarm behaviour.
+        </p>
+
+        <ul>
+          <li>Block &amp; JavaScript coding</li>
+          <li>Robot challenge league</li>
+          <li>AI and sensor projects</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD 3 -->
+    <div class="lab-card">
+
+      <div class="lab-image placeholder">
+      <img src="./assets/chem.jpeg" alt="Students conducting a chemistry experiment">
+      </div>
+
+      <div class="lab-content">
+
+        <span class="lab-label">CHEMISTRY LAB</span>
+
+        <h3>Real experiments, real safety</h3>
+
+        <p>
+          Fume hoods, titration and analysis tools used in first-year courses.
+        </p>
+
+        <ul>
+          <li>Organic &amp; analytical units</li>
+          <li>Science fair mentoring</li>
+          <li>Olympiad preparation</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     LEARNING IN ACTION
+     ===================================================== -->
+
+<section class="learning-action">
+
+  <div class="learning-action-inner">
+
+    <!-- VIDEO -->
+    <div class="learning-video">
+
+     <video controls>
+  <source src="./assets/STEAM Lab.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+    </div>
+
+
+    <!-- TEXT -->
+    <div class="learning-content">
+
+      <p class="eyebrow">Learning in action</p>
+
+      <h2>Where ideas become real</h2>
+
+      <p>
+        Students don't just learn about technology, they build, test,
+        create and solve problems together. Take a glimpse inside our
+        STEAM lab and see our students learning by doing.
+      </p>
+
+     <a href="steam.html" class="learning-btn">
+  Explore Our STEAM Lab
+  <span>→</span>
+</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     SCHOOL LIFE PREVIEW
+     ===================================================== -->
+
+<section class="school-life-preview">
+
+  <div class="school-life-inner">
+
+    <!-- TEXT -->
+    <div class="school-life-content">
+
+      <p class="school-life-eyebrow">School Life</p>
+
+      <h2>
+        What is it really like
+        to be a student at MAOSS?
+      </h2>
+
+      <p class="school-life-intro">
+        School is more than lessons and exams. It's the people
+        you meet, the activities you take part in, the support
+        around you, and the spaces where you learn and grow.
+      </p>
+
+      <div class="school-life-tags">
+        <span>Students</span>
+        <span>Parents</span>
+        <span>Campus</span>
+      </div>
+
+      <a href="students.html" class="school-life-btn">
+        Explore School Life
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <!-- IMAGE -->
+    <div class="school-life-image">
+
+      <div class="school-life-image-frame">
+
+        <img
+          src="./assets/studingsection.png"
+          alt="Students learning and connecting at MAOSS"
+        >
+
+      </div>
+
+      <div class="school-life-image-label">
+        <span>01</span>
+        <p>Learn · Connect · Grow</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="index.html">
-          <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
+<div class="footer-brand">
+<a class="brand" href="index.html">
+          <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
           MAOSS <em>·</em> Aley
         </a>
-        <p>Maroun Abboud Public High School — committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
+        <p>Maroun Abboud Public High School committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>

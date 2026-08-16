@@ -14,440 +14,101 @@
      ============================================================= */
 
   /* ---------- Hero for news ---------- */
-  .news-hero{
-    position:relative;
-    min-height: clamp(440px, 82vh, 760px);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    color:#FFFFFF;
-    background:linear-gradient(135deg, #0a2b1c 0%, #1C6B3B 50%, #0F3D26 100%);
-  }
-  .news-hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%);
-    z-index:1;
-  }
-  .news-hero .hero-inner{position:relative;z-index:2; font-family:'Montserrat', sans-serif;}
+  /* ---------- News & Events Hero ---------- */
+.news-hero{
+  position:relative;
+  min-height:clamp(440px, 82vh, 760px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#FFFFFF;
 
-  /* ---------- Section shell ---------- */
-  .news-section{
-    padding:clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
-    max-width:78rem;
-    margin:0 auto;
-  }
-  .news-section .section-head{
-    text-align:center;
-    max-width:36rem;
-    margin:0 auto 2.8rem;
-  }
-  .news-section .section-head .eyebrow{color:#8C1520;}
-  .news-section .section-head h2{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:clamp(1.6rem, 3vw, 2.1rem);
-    margin-top:0.5rem;
-    color:#0F3D26;
-  }
-  .news-section .section-head p{
-    margin-top:0.7rem;
-    color:#4B4A44;
-    font-family:'Montserrat', sans-serif;
-    font-size:0.95rem;
-    line-height:1.6;
-  }
+  /* MAOSS NAVY */
+  background:
+    linear-gradient(
+      135deg,
+      #071C33 0%,
+      #0D2949 52%,
+      #123A63 100%
+    );
+}
 
-  /* ---------- Card grid (2-col then 3-col) ---------- */
-  .news-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:1.2rem;
-  }
-  @media(min-width:540px){.news-grid{grid-template-columns:1fr 1fr;}}
-  @media(min-width:960px){.news-grid{grid-template-columns:1fr 1fr 1fr;}}
+/* subtle gold atmosphere */
+.news-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
 
-  .news-card{
-    background:#FFFFFF;
-    border:1px solid #E2DBC7;
-    border-top:3px solid #1C6B3B;
-    padding:1.6rem 1.5rem 1.8rem;
-    transition:transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    position:relative;
-  }
-  .news-card:hover{
-    transform:translateY(-3px);
-    border-top-color:#C41E2A;
-    box-shadow:0 14px 28px -18px rgba(20,42,34,0.35);
-  }
-  .news-card .card-icon{
-    font-size:1.8rem;
-    display:block;
-    margin-bottom:0.5rem;
-    line-height:1;
-  }
-  .news-card h3{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:1.1rem;
-    margin-bottom:0.5rem;
-    color:#1C1B18;
-  }
-  .news-card p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.9rem;
-    color:#4B4A44;
-    line-height:1.55;
-  }
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(214,168,79,0.13) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(214,168,79,0.08) 0%,
+      transparent 32%
+    );
 
-  /* ---------- Divider ---------- */
-  .section-divider{
-    width:50px;
-    height:2px;
-    background:linear-gradient(90deg, #C41E2A, #1C6B3B);
-    margin:0 auto 0.4rem;
-  }
+  z-index:1;
+}
 
-  /* ---------- Stay Connected callout ---------- */
-  .stay-connected{
-    background:#0F3D26;
-    border-radius:12px;
-    padding:2.5rem 2rem;
-    text-align:center;
-    color:#FFFFFF;
-    max-width:48rem;
-    margin:0 auto;
-  }
-  .stay-connected .icon{font-size:2.2rem;display:block;margin-bottom:0.8rem;}
-  .stay-connected h3{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:1.3rem;
-    margin-bottom:0.6rem;
-  }
-  .stay-connected p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.95rem;
-    color:#DCE3D9;
-    max-width:32rem;
-    margin:0 auto;
-    line-height:1.6;
-  }
+/* subtle gold line/detail */
+.news-hero::after{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-220px;
+  bottom:-280px;
 
-  /* ---------- Events header block ---------- */
-  .events-header{
-    background:#F0EFEA;
-    padding:clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
-    text-align:center;
-    border-top:1px solid #E2DBC7;
-    border-bottom:1px solid #E2DBC7;
-  }
-  .events-header h2{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:clamp(1.7rem, 3.2vw, 2.3rem);
-    color:#0F3D26;
-    margin-bottom:0.6rem;
-  }
-  .events-header p{
-    font-family:'Montserrat', sans-serif;
-    color:#4B4A44;
-    max-width:36rem;
-    margin:0 auto;
-    line-height:1.6;
-    font-size:0.98rem;
-  }
+  border:1px solid rgba(214,168,79,0.18);
+  border-radius:50%;
 
-  /* ---------- Activity cards (2-col) ---------- */
-  .activity-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:1.2rem;
-  }
-  @media(min-width:640px){.activity-grid{grid-template-columns:1fr 1fr;}}
-  @media(min-width:1000px){.activity-grid{grid-template-columns:1fr 1fr 1fr;}}
+  box-shadow:
+    0 0 0 70px rgba(214,168,79,0.025),
+    0 0 0 140px rgba(214,168,79,0.018);
 
-  .activity-card{
-    background:#FFFFFF;
-    border:1px solid #E2DBC7;
-    border-left:4px solid #1C6B3B;
-    padding:1.3rem 1.4rem;
-    display:flex;
-    align-items:flex-start;
-    gap:1rem;
-    transition:transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .activity-card:hover{
-    transform:translateX(4px);
-    box-shadow:0 8px 20px -14px rgba(0,0,0,0.12);
-  }
-  .activity-card .act-icon{
-    font-size:1.6rem;
-    flex-shrink:0;
-    line-height:1;
-    margin-top:0.1rem;
-  }
-  .activity-card h4{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:0.98rem;
-    color:#1C1B18;
-    margin-bottom:0.2rem;
-  }
-  .activity-card p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.88rem;
-    color:#4B4A44;
-    line-height:1.5;
-    margin:0;
-  }
+  z-index:1;
+}
 
-  /* ---------- Community & Social — Carousel ---------- */
-  .community-intro{
-    text-align:center;
-    margin-bottom:2rem;
-  }
-  .community-intro p{
-    font-family:'Montserrat', sans-serif;
-    color:#4B4A44;
-    max-width:36rem;
-    margin:0 auto;
-    line-height:1.6;
-    font-size:0.97rem;
-  }
+.news-hero .hero-inner{
+  position:relative;
+  z-index:2;
+  font-family:'Montserrat', sans-serif;
+}
+.news-hero h1{
+  color:#FFFFFF;
+  letter-spacing:-0.02em;
+  font-size: clamp(2rem, 5.2vw, 3.6rem);
+  font-weight: 500;
+}
 
-  .carousel-wrapper{
-    position:relative;
-    max-width:860px;
-    margin:0 auto;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 8px 28px rgba(0,0,0,0.12);
-  }
-  .carousel-track{
-    display:flex;
-    transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
-    will-change:transform;
-  }
-  .carousel-slide{
-    min-width:100%;
-    aspect-ratio:16/9;
-    cursor:pointer;
-    position:relative;
-    overflow:hidden;
-  }
-  .carousel-slide img{
-    display:block;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    position:absolute;
-    inset:0;
-    transition:transform 0.4s ease;
-  }
-  .carousel-slide:hover img{
-    transform:scale(1.04);
-  }
-  .carousel-slide::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.10);
-    z-index:1;
-    transition:background 0.3s ease;
-  }
-  .carousel-slide:hover::after{
-    background:rgba(0,0,0,0.02);
-  }
+.news-hero .hero-lede{
+  color:rgba(255,255,255,0.82);
+  max-width:650px;
+  margin:1.2rem auto 0;
+  line-height:1.7;
+  font-family:'Montserrat', sans-serif;
+}
 
-  .carousel-btn{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.88);
-    border:none;
-    box-shadow:0 2px 10px rgba(0,0,0,0.15);
-    color:#1C1B18;
-    font-size:1.2rem;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:background 0.2s ease, transform 0.2s ease;
-    z-index:10;
-    backdrop-filter:blur(4px);
-    -webkit-backdrop-filter:blur(4px);
-  }
-  .carousel-btn:hover{
-    background:#FFFFFF;
-    transform:translateY(-50%) scale(1.08);
-  }
-  .carousel-btn.prev{left:1rem;}
-  .carousel-btn.next{right:1rem;}
+.news-hero .container{
+  text-align:center;
+}
 
-  .carousel-dots{
-    display:flex;
-    justify-content:center;
-    gap:0.5rem;
-    margin-top:1.2rem;
-  }
-  .carousel-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#CCC8BC;
-    border:none;
-    cursor:pointer;
-    transition:background 0.25s ease, transform 0.25s ease;
-    padding:0;
-  }
-  .carousel-dot.is-active{
-    background:#0F3D26;
-    transform:scale(1.35);
-  }
-  .carousel-dot:hover{
-    background:#8A9E91;
-  }
-
-  .carousel-caption{
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    padding:1.2rem 1.5rem;
-    background:linear-gradient(0deg, rgba(0,0,0,0.65) 0%, transparent 100%);
-    color:#FFFFFF;
-    font-family:'Montserrat', sans-serif;
-    font-size:0.85rem;
-    z-index:3;
-    text-align:center;
-    letter-spacing:0.02em;
-    pointer-events:none;
-  }
-
-  @media(max-width:599px){
-    .carousel-btn{width:34px;height:34px;font-size:0.95rem;}
-    .carousel-btn.prev{left:0.5rem;}
-    .carousel-btn.next{right:0.5rem;}
-    .carousel-caption{font-size:0.75rem;padding:0.8rem 1rem;}
-  }
-
-  /* ---------- Lightbox ---------- */
-  .lightbox{
-    position:fixed;
-    inset:0;
-    z-index:1000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    background:rgba(0,0,0,0.88);
-    backdrop-filter:blur(6px);
-    -webkit-backdrop-filter:blur(6px);
-    padding:1.5rem;
-  }
-  .lightbox.is-open{
-    display:flex;
-    animation:lbFadeIn 0.25s ease;
-  }
-  @keyframes lbFadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
-  }
-
-  .lightbox-content{
-    position:relative;
-    max-width:84vw;
-    max-height:84vh;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 24px 64px rgba(0,0,0,0.5);
-    background:#1C1B18;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
-  .lightbox-content img{
-    display:block;
-    max-width:100%;
-    max-height:75vh;
-    object-fit:contain;
-    border-radius:12px 12px 0 0;
-  }
-  .lightbox-caption{
-    width:100%;
-    padding:1rem 1.5rem;
-    background:#0F3D26;
-    color:#FFFFFF;
-    font-family:'Montserrat', sans-serif;
-    font-size:0.95rem;
-    font-weight:500;
-    text-align:center;
-    letter-spacing:0.02em;
-  }
-
-  .lightbox-close{
-    position:absolute;
-    top:0.8rem;
-    right:0.8rem;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:rgba(0,0,0,0.5);
-    border:1px solid rgba(255,255,255,0.15);
-    color:#FFFFFF;
-    font-size:1.3rem;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:background 0.2s ease, transform 0.2s ease;
-    z-index:10;
-  }
-  .lightbox-close:hover{
-    background:rgba(196,30,42,0.8);
-    transform:scale(1.08);
-  }
-
-  .lightbox-nav{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:44px;
-    height:44px;
-    border-radius:50%;
-    background:rgba(0,0,0,0.45);
-    border:1px solid rgba(255,255,255,0.12);
-    color:#FFFFFF;
-    font-size:1.2rem;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:background 0.2s ease, transform 0.2s ease;
-    z-index:10;
-  }
-  .lightbox-nav:hover{
-    background:rgba(15,61,38,0.8);
-    transform:translateY(-50%) scale(1.08);
-  }
-  .lightbox-nav.prev{left:1rem;}
-  .lightbox-nav.next{right:1rem;}
+.news-hero .hero-eyebrow{
+  margin:0 0 1rem;
+  color:#D6A84F;
+  font-family:'Montserrat', sans-serif;
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+}
 
 
-
-  @media(max-width:599px){
-    .lightbox-content{max-width:94vw;}
-    .lightbox-nav{width:36px;height:36px;font-size:1rem;}
-    .lightbox-nav.prev{left:0.5rem;}
-    .lightbox-nav.next{right:0.5rem;}
-  }
 </style>
 </head>
 <body>
@@ -455,9 +116,8 @@
   <!-- ==================== Header ==================== -->
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="index.html">
-        <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
-        MAOSS <em>·</em> Aley
+<a class="brand" href="index.html">
+        <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
       </a>
 
       <nav class="nav-links">
@@ -465,12 +125,14 @@
         <a href="about.html">About</a>
         <a href="academic.html">Academics</a>
         <a href="admission.html">Admissions</a>
-        <a href="students.html">Students</a>
-        <a href="parent.html">Parents</a>
+        <a href="steam.html">STEAM Lab</a>
+    
+          <a href="students.html">School Life</a>
         <a href="news.html" class="active">News &amp; Events</a>
         <a href="staff.html">Staff</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
@@ -478,16 +140,17 @@
       </button>
     </div>
   </header>
-
+<main>
   <div class="nav-backdrop" id="navBackdrop"></div>
   <div class="nav-panel" id="navPanel" aria-hidden="true">
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="academic.html">Academics</a>
-      <a href="admission.html">Admissions</a>
-      <a href="students.html">Students</a>
-      <a href="parent.html">Parents</a>
+<a href="admission.html">Admissions</a>
+      <a href="steam.html">STEAM Lab</a>
+
+       <a href="students.html">School Life</a>
       <a href="news.html" class="active">News &amp; Events</a>
       <a href="staff.html">Staff</a>
       <a href="services.html">Services</a>
@@ -497,341 +160,666 @@
 
   <!-- ==================== Hero ==================== -->
   <section class="news-hero">
-    <div class="hero-inner">
-      <div class="container">
-        <h1 style="font-family:'Montserrat', sans-serif;font-weight:500;
-  font-size:clamp(1.5rem, 5.2vw, 3.6rem);
-  line-height:1.12;
-  letter-spacing:-0.01em;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 
-               0 2px 4px rgba(0, 0, 0, 0.2);" >News &amp; Events</h1>
-        <p class="hero-lede">Stay informed with the latest updates, achievements, and important announcements from our school community.</p>
-      </div>
-    </div>
-  </section>
+  <div class="hero-inner">
+    <div class="container">
 
-  <!-- =============================================================
-       SECTION — School News
-       ============================================================= -->
-  <section class="news-section" id="news">
-    <div class="section-head">
-      <div class="section-divider"></div>
-      <p class="eyebrow">Stay Informed</p>
-      <h2>📰 School News</h2>
-      <p>Maroun Abboud Secondary School (MAOSS) — Aley, we keep our community informed with the latest updates, achievements, and important announcements from our school life.</p>
-    </div>
+      <p class="hero-eyebrow">NEWS &amp; EVENTS</p>
 
-    <div class="news-grid">
-      <div class="news-card">
-        <span class="card-icon">📚</span>
-        <h3>Academic Updates</h3>
-        <p>Exam schedules and results updates, new teaching programs and curriculum improvements, and student academic achievements.</p>
-      </div>
+      <h1 style="font-family:'Montserrat', sans-serif;font-weight:500;
+        font-size:clamp(1.5rem, 5.2vw, 3.6rem);
+        line-height:1.12;
+        letter-spacing:-0.01em;
+        text-shadow:0 4px 12px rgba(0,0,0,0.15),
+                    0 2px 4px rgba(0,0,0,0.2);">
+        What’s happening at MAOSS.
+      </h1>
 
-      <div class="news-card">
-        <span class="card-icon">🏫</span>
-        <h3>School Announcements</h3>
-        <p>Important notices from the administration, including changes in the school calendar, official instructions, reminders, and registration updates.</p>
-      </div>
+      <p class="hero-lede">
+        Discover the achievements, experiences, and moments that bring our
+        school community to life.
+      </p>
 
-      <div class="news-card">
-        <span class="card-icon">🏆</span>
-        <h3>Achievements &amp; Success</h3>
-        <p>We proudly highlight outstanding student results, academic competitions, awards, and teacher recognition achievements.</p>
-      </div>
-
-      <div class="news-card">
-        <span class="card-icon">🎉</span>
-        <h3>School Activities</h3>
-        <p>Highlights from sports events, tournaments, cultural celebrations, performances, science fairs, and exhibitions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- =============================================================
-       SECTION — Stay Connected
-       ============================================================= -->
-  <section class="news-section" style="padding-top:0;">
-    <div class="stay-connected">
-      <span class="icon">📌</span>
-      <h3>Stay Connected</h3>
-      <p>Parents and students are encouraged to regularly check school news to stay updated and informed about all important events and announcements.</p>
-    </div>
-  </section>
-
-  <!-- =============================================================
-       EVENTS HEADER
-       ============================================================= -->
-  <div class="events-header">
-    <p class="eyebrow" style="color:#8C1520;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin-bottom:0.6rem;">Get Involved</p>
-    <h2>🎉 Events &amp; Activities</h2>
-    <p>We believe that learning goes beyond the classroom. Our events and activities help students develop creativity, teamwork, and confidence while enjoying a balanced school life.</p>
-  </div>
-
-  <!-- =============================================================
-       SECTION — School Events & Activities
-       ============================================================= -->
-  <section class="news-section">
-
-    <!-- School Events -->
-    <div style="margin-bottom:3rem;">
-      <div class="section-head" style="margin-bottom:1.8rem;">
-        <p class="eyebrow">Annual Gatherings</p>
-        <h2>🏫 School Events</h2>
-        <p>We organize important annual events that bring the whole school community together.</p>
-      </div>
-      <div class="activity-grid">
-        <div class="activity-card">
-          <span class="act-icon">🎓</span>
-          <div>
-            <h4>Graduation Ceremonies</h4>
-            <p>Celebrating our students' accomplishments as they move forward to the next chapter.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">📅</span>
-          <div>
-            <h4>Opening &amp; Closing Events</h4>
-            <p>Bookending the academic year with community gatherings and reflection.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">👨‍👩‍👧</span>
-          <div>
-            <h4>Parent-Teacher Gatherings</h4>
-            <p>Building strong home-school partnerships through regular communication.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🏆</span>
-          <div>
-            <h4>Award Ceremonies</h4>
-            <p>Recognizing excellence and effort across academics, sports, and the arts.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cultural Activities -->
-    <div style="margin-bottom:3rem;">
-      <div class="section-head" style="margin-bottom:1.8rem;">
-        <p class="eyebrow">Creative Expression</p>
-        <h2>🎭 Cultural Activities</h2>
-        <p>Students participate in cultural programs that enhance creativity and expression.</p>
-      </div>
-      <div class="activity-grid">
-        <div class="activity-card">
-          <span class="act-icon">🎤</span>
-          <div>
-            <h4>School Performances &amp; Shows</h4>
-            <p>Talent takes the stage through music, drama, and dance productions.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">📖</span>
-          <div>
-            <h4>Poetry &amp; Literature Events</h4>
-            <p>Cultivating a love for language and creative writing among students.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🌍</span>
-          <div>
-            <h4>National &amp; Cultural Celebrations</h4>
-            <p>Honoring our heritage and embracing cultural diversity throughout the year.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🎨</span>
-          <div>
-            <h4>Art Exhibitions</h4>
-            <p>Showcasing student artwork and visual creativity to the school community.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sports Activities -->
-    <div style="margin-bottom:3rem;">
-      <div class="section-head" style="margin-bottom:1.8rem;">
-        <p class="eyebrow">Teamwork &amp; Fitness</p>
-        <h2>🏀 Sports Activities</h2>
-        <p>Physical development and teamwork are an important part of school life.</p>
-      </div>
-      <div class="activity-grid">
-        <div class="activity-card">
-          <span class="act-icon">⚽</span>
-          <div>
-            <h4>Football Tournaments</h4>
-            <p>Building teamwork and school spirit through competitive football matches.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🏀</span>
-          <div>
-            <h4>Basketball Competitions</h4>
-            <p>Developing agility, strategy, and sportsmanship on the court.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🏃</span>
-          <div>
-            <h4>Athletics &amp; Sports Days</h4>
-            <p>Annual field events that bring the entire school together in healthy competition.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🤸</span>
-          <div>
-            <h4>Fitness &amp; Physical Education</h4>
-            <p>Regular PE programs promoting lifelong health and physical well-being.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Educational Activities -->
-    <div style="margin-bottom:3rem;">
-      <div class="section-head" style="margin-bottom:1.8rem;">
-        <p class="eyebrow">Hands-on Learning</p>
-        <h2>🧪 Educational Activities</h2>
-        <p>We support hands-on learning experiences that inspire curiosity and discovery.</p>
-      </div>
-      <div class="activity-grid">
-        <div class="activity-card">
-          <span class="act-icon">🔬</span>
-          <div>
-            <h4>Science Fairs &amp; Experiments</h4>
-            <p>Encouraging scientific inquiry and innovation through student-led projects.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">💻</span>
-          <div>
-            <h4>Tech &amp; Robotics Workshops</h4>
-            <p>Preparing students for the digital future with coding and technology sessions.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">🧠</span>
-          <div>
-            <h4>Academic Competitions &amp; Quizzes</h4>
-            <p>Challenging students to excel in knowledge-based contests and Olympiads.</p>
-          </div>
-        </div>
-        <div class="activity-card">
-          <span class="act-icon">📚</span>
-          <div>
-            <h4>Educational Field Trips</h4>
-            <p>Learning beyond the classroom through museums, nature, and cultural sites.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- =============================================================
-         Community & Social Activities — IMAGE GALLERY
-         ============================================================= -->
-    <div>
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <p class="eyebrow">Giving Back</p>
-        <h2>🤝 Community &amp; Social Activities</h2>
-      </div>
-
-      <div class="community-intro">
-        <p>We encourage students to develop social responsibility through charity events, environmental campaigns, and community service projects that make a meaningful impact.</p>
-      </div>
-
-      <!-- Carousel -->
-      <div class="carousel-wrapper" id="carouselWrapper">
-        <div class="carousel-track" id="carouselTrack">
-
-          <div class="carousel-slide">
-            <img src="./assets/activity1.png" alt="STEAM-LAB" loading="lazy">
-          </div>
-
-          <div class="carousel-slide">
-            <img src="./assets/activity2.png" alt="activity in Maroun Abboud Secondary School" loading="lazy">
-         
-          </div>
-
-          <div class="carousel-slide">
-            <img src="./assets/activity3.webp" alt="Sphero-lab-training" loading="lazy">
-
-          </div>
-
-          <div class="carousel-slide">
-            <img src="./assets/activity4.webp" alt="Football Players in Maroun Abboud Secondary School" loading="lazy">
-           
-          </div>
-
-          <div class="carousel-slide">
-            <img src="./assets/Compition.png" alt="Poem-Compution" loading="lazy">
-          </div>
-
-          <div class="carousel-slide">
-            <img src="./assets/STEAM.webp" alt="Recycling Program" loading="lazy">
-    
-          </div>
-
-          <div class="carousel-slide">
-            <img src="./assets/STEAM-from inside.jpg" alt="STEAM" loading="lazy">
-          </div>
-
-             <div class="carousel-slide">
-            <img src="./assets/army.webp" alt="Army" loading="lazy">
-          </div>
-
-            <div class="carousel-slide">
-            <img src="./assets/charity.webp" alt="Helping people" loading="lazy">
-          </div>
-
-
-
-
-        </div>
-
-        <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">‹</button>
-        <button class="carousel-btn next" id="carouselNext" aria-label="Next slide">›</button>
-      </div>
-
-      <div class="carousel-dots" id="carouselDots"></div>
-    </div>
-
-  </section>
-
-  <!-- =============================================================
-       LIGHTBOX
-       ============================================================= -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="lightbox-close" id="lbClose" aria-label="Close image viewer">✕</button>
-    <button class="lightbox-nav prev" id="lbPrev" aria-label="Previous image">‹</button>
-    <button class="lightbox-nav next" id="lbNext" aria-label="Next image">›</button>
-    <div class="lightbox-content">
-      <img id="lbImage" src="" alt="Community activity photo">
-      <div class="lightbox-caption" id="lbCaption"></div>
     </div>
   </div>
+</section>
 
-  <!-- =============================================================
-       CLOSING
-       ============================================================= -->
-  <section class="closing">
-    <div class="closing-inner">
-      <blockquote>Every event, every achievement, and every act of service brings us closer as a school community. Together, we build a future rooted in knowledge, compassion, and purpose.</blockquote>
-      <p class="signoff">Maroun Abboud Public High School<span>Aley, Lebanon</span></p>
+<!-- =============================================================
+     SECTION 01 — LATEST NEWS
+     ============================================================= -->
+
+<section class="latest-news" id="latest-news">
+
+  <div class="latest-news-head">
+    <p class="eyebrow">Latest Updates</p>
+
+    <h2>What’s happening at MAOSS.</h2>
+
+    <div class="section-divider"></div>
+
+    <p>
+      Discover the achievements, projects, and experiences that bring
+      our school community to life.
+    </p>
+  </div>
+
+
+  <div class="news-feature-grid">
+
+    <!-- =========================================================
+         FEATURED STORY — 01
+    ========================================================= -->
+
+    <article class="news-featured">
+
+      <div class="news-featured-image">
+
+        <div class="news-featured-placeholder">
+          <span>STUDENT INNOVATION</span>
+        </div>
+
+        <span class="news-number">01</span>
+
+      </div>
+
+
+      <div class="news-featured-content">
+
+        <span class="news-category">Student Innovation</span>
+
+        <h3>A MAOSS student builds the school website</h3>
+
+        <p>
+          A Grade 11 student, <strong>Hoda Nshawy</strong>, designed and
+          developed the MAOSS website, bringing together coding, design,
+          creativity, and problem-solving to create something real for
+          the school community.
+        </p>
+
+        <span class="news-meta">Student-led project</span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================================================
+         SUPPORTING STORIES
+    ========================================================= -->
+
+    <div class="news-stories">
+
+
+      <!-- STORY 02 -->
+      <article class="news-story">
+
+        <div class="news-story-number">02</div>
+
+        <div class="news-story-content">
+
+          <span class="news-category">Achievement</span>
+
+          <h3>Gold-rated at the KANZ AI Hackathon</h3>
+
+          <p>
+            A MAOSS student achieved a <strong>Gold rating</strong>
+            at the KANZ AI Hackathon for an innovative project
+            demonstrating creativity, technical thinking, and
+            problem-solving.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STORY 03 -->
+      <article class="news-story">
+
+        <div class="news-story-number">03</div>
+
+        <div class="news-story-content">
+
+          <span class="news-category">Student Leadership</span>
+
+          <h3>Students take the lead in the E-Portfolio Competition</h3>
+
+          <p>
+            Students were challenged to create personal digital
+            portfolios showcasing their work, skills, creativity,
+            and achievements through a student-led and mentored
+            initiative.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STORY 04 -->
+      <article class="news-story">
+
+        <div class="news-story-number">04</div>
+
+        <div class="news-story-content">
+
+          <span class="news-category">MUN Achievement</span>
+
+          <h3>Proud of our MUN students</h3>
+
+          <p>
+            Congratulations to <strong>Alaa Ajeeb</strong> for
+            earning a Position Paper Award at MUN, recognizing
+            strong preparation, research, writing, and thoughtful
+            participation.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STORY 05 -->
+      <article class="news-story">
+
+        <div class="news-story-number">05</div>
+
+        <div class="news-story-content">
+
+          <span class="news-category">Cultural Achievement</span>
+
+          <h3>Students shine at the LIS Cultural Week</h3>
+
+          <p>
+            Congratulations to <strong>Farah Al-Fleiti</strong> for
+            earning first place in the short story competition, and
+            <strong>Sara Al-Denef</strong> for earning third place
+            in poetry during Cultural Week at LIS.
+          </p>
+
+          <p class="news-thanks">
+            We are proud of their creativity and achievements.
+            Special thanks to the High School Arabic Language Committee,
+            especially coordinator <strong>Ms. Samar Bahmad</strong>,
+            for supporting our students.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STORY 06 -->
+      <article class="news-story">
+
+        <div class="news-story-number">06</div>
+
+        <div class="news-story-content">
+
+          <span class="news-category">STEAM &amp; Innovation</span>
+
+          <h3>STEAM students showcase “Print Me a Bottle”</h3>
+
+          <p>
+            MAOSS High School STEAM Lab students participated in the
+            Industrialists and Food Exhibition at Forum de Beyrouth,
+            presenting their <strong>“Print Me a Bottle”</strong>
+            project and showcasing creativity, technical skills,
+            and hands-on innovation.
+          </p>
+
+          <p class="news-thanks">
+            Special thanks to teachers
+            <strong>Layal Maalawi</strong> and
+            <strong>Imad Malaab</strong>
+            for their guidance and support.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STORY 07 -->
+   <!-- STORY 07 -->
+<article class="news-story">
+
+  <div class="news-story-number">07</div>
+
+  <div class="news-story-content">
+
+    <span class="news-category">National Science Competition</span>
+
+    <h3>2025 — Mobarat Al 3oloum</h3>
+
+    <p>
+      MAOSS students earned a <strong>Silver Medal</strong> for the
+      continued development of <strong>Project MAP</strong>, alongside
+      a <strong>Bronze Medal</strong> for a 3D Printing Filament Project,
+      highlighting innovation in sustainable and accessible engineering
+      solutions.
+    </p>
+
+  </div>
+
+</article>
+
+
+<!-- STORY 08 -->
+<article class="news-story">
+
+  <div class="news-story-number">08</div>
+
+  <div class="news-story-content">
+
+    <span class="news-category">National Science Competition</span>
+
+    <h3>2024 — Mobarat Al 3oloum</h3>
+
+    <p>
+      MAOSS students earned a <strong>Gold Medal</strong> for
+      <strong>Project MAP</strong>, recognized for its innovative
+      design, practical application, and real-world impact.
+    </p>
+
+  </div>
+
+</article>
+
+
+<!-- STORY 09 -->
+<article class="news-story">
+
+  <div class="news-story-number">09</div>
+
+  <div class="news-story-content">
+
+    <span class="news-category">STEAM &amp; Technology</span>
+
+    <h3>Students turning ideas into working projects</h3>
+
+    <p>
+      From robotics and coding to electronics, Sphero,
+      3D printing, and hands-on experimentation, MAOSS
+      students explore technology by building, testing,
+      and creating.
+    </p>
+
+  </div>
+
+</article>
+
+
     </div>
-  </section>
 
+  </div>
+
+</section>
+
+<!-- =============================================================
+     SECTION 02 — EVENTS & ACTIVITIES
+     ============================================================= -->
+
+<section class="events-activities" id="events-activities">
+
+
+  <!-- =========================================================
+       SECTION HEADER
+  ========================================================= -->
+
+  <div class="events-head">
+
+    <p class="eyebrow">Beyond the Classroom</p>
+
+    <h2>Events &amp; Activities</h2>
+
+    <div class="section-divider"></div>
+
+    <p>
+      School life extends beyond the classroom through creativity,
+      collaboration, culture, technology, and experiences that bring
+      students together.
+    </p>
+
+  </div>
+
+
+  <!-- =========================================================
+       ACTIVITIES GRID
+  ========================================================= -->
+
+  <div class="activities-grid">
+
+
+    <!-- =======================================================
+         01 — STEAM & INNOVATION
+    ======================================================== -->
+
+    <article class="activity-card activity-steam">
+
+      <div class="activity-number">01</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">Innovation</span>
+
+        <h3>STEAM &amp; Innovation</h3>
+
+        <p>
+          Students explore robotics, coding, electronics, 3D printing,
+          and hands-on projects by turning ideas into something real.
+        </p>
+
+        <span class="activity-keywords">
+          Build · Experiment · Create
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =======================================================
+         02 — DABKE TEAM
+    ======================================================== -->
+
+    <article class="activity-card activity-dabke">
+
+      <div class="activity-number">02</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">Culture</span>
+
+        <h3>Dabke Team</h3>
+
+        <p>
+          Students celebrate Lebanese heritage through traditional
+          Dabke, developing teamwork, confidence, coordination,
+          and school spirit.
+        </p>
+
+        <span class="activity-keywords">
+          Heritage · Teamwork · Performance
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =======================================================
+         03 — CHOIR & COMMUNITY
+    ======================================================== -->
+
+    <article class="activity-card activity-choir">
+
+      <div class="activity-number">03</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">Music &amp; Community</span>
+
+        <h3>Choir &amp; Community</h3>
+
+        <p>
+          The High School Choir takes part in musical experiences
+          that bring students together and connect the school with
+          the wider community.
+        </p>
+
+
+        <!-- CHOIR VIDEO -->
+
+        <div class="activity-video">
+
+          <video controls preload="metadata">
+
+            <source
+              src="./assets/Maroun Abboud Sechool.mp4"
+              type="video/mp4"
+            >
+
+            Your browser does not support the video tag.
+
+          </video>
+
+        </div>
+
+        <span class="activity-video-label">
+          See our school choir
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =======================================================
+         04 — MUN & DEBATE
+    ======================================================== -->
+
+    <article class="activity-card activity-mun">
+
+      <div class="activity-number">04</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">Leadership</span>
+
+        <h3>MUN &amp; Debate</h3>
+
+        <p>
+          Students research global issues, develop arguments,
+          communicate their ideas, and experience the challenges
+          of diplomacy and leadership.
+        </p>
+
+        <span class="activity-keywords">
+          Research · Speak · Lead
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =======================================================
+         05 — CULTURAL & LANGUAGE ACTIVITIES
+    ======================================================== -->
+
+    <article class="activity-card activity-culture">
+
+      <div class="activity-number">05</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">Expression</span>
+
+        <h3>Cultural &amp; Language Activities</h3>
+
+        <p>
+          Students explore language, literature, creativity, and
+          cultural expression through activities and school
+          experiences.
+        </p>
+
+        <span class="activity-keywords">
+          Express · Create · Connect
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =======================================================
+         06 — CODING & DIGITAL ACTIVITIES
+    ======================================================== -->
+
+    <article class="activity-card activity-coding">
+
+      <div class="activity-number">06</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">Digital Creativity</span>
+
+        <h3>Coding &amp; Digital Activities</h3>
+
+        <p>
+          Students explore coding, web development, and digital
+          creativity through projects that turn ideas into interactive
+          experiences.
+        </p>
+
+        <span class="activity-keywords">
+          Code · Design · Build
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- =======================================================
+         07 — STUDENT LIFE & COMMUNITY
+    ======================================================== -->
+
+    <article class="activity-card activity-community">
+
+      <div class="activity-number">07</div>
+
+      <div class="activity-content">
+
+        <span class="activity-label">School Community</span>
+
+        <h3>Student Life &amp; Community</h3>
+
+        <p>
+          Students come together through school events, collaborative
+          experiences, and activities that build participation,
+          connection, and school spirit.
+        </p>
+
+        <span class="activity-keywords">
+          Participate · Connect · Belong
+        </span>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+
+<!-- =============================================================
+     SECTION 03 — MOMENTS AT MAOSS
+     ============================================================= -->
+
+<section class="moments-maoss" id="moments-maoss">
+
+  <div class="moments-head">
+
+    <p class="eyebrow">A Glimpse Into MAOSS</p>
+
+    <h2>Moments at MAOSS</h2>
+
+    <div class="section-divider"></div>
+
+    <p>
+      Small moments, shared experiences, and memories that make
+      life at MAOSS special.
+    </p>
+
+  </div>
+
+
+  <div class="moments-gallery">
+
+    <figure class="moment-item">
+      <div class="moment-image">
+        <img
+          src="./assets/students-6-news.png"
+          alt="MAOSS students participating in a school activity"
+          loading="lazy"
+        >
+      </div>
+    </figure>
+
+
+    <figure class="moment-item">
+      <div class="moment-image">
+        <img
+          src="./assets/students-2-news.jpg"
+          alt="MAOSS students taking part in a school event"
+          loading="lazy"
+        >
+      </div>
+    </figure>
+
+
+    <figure class="moment-item">
+      <div class="moment-image">
+        <img
+          src="./assets/students-8-news.jpg"
+          alt="MAOSS students during a cultural activity"
+          loading="lazy"
+        >
+      </div>
+    </figure>
+
+
+    <figure class="moment-item">
+      <div class="moment-image">
+        <img
+          src="./assets/students-7-news.png"
+          alt="MAOSS students working together"
+          loading="lazy"
+        >
+      </div>
+    </figure>
+
+
+    <figure class="moment-item">
+      <div class="moment-image">
+        <img
+          src="./assets/students-3-news.jpg"
+          alt="MAOSS students participating in an activity"
+          loading="lazy"
+        >
+      </div>
+    </figure>
+
+
+    <figure class="moment-item">
+      <div class="moment-image">
+        <img
+          src="./assets/student-ife.jpg"
+          alt="MAOSS students sharing a school experience"
+          loading="lazy"
+        >
+      </div>
+    </figure>
+
+  </div>
+
+</section>
+
+</main>
   <!-- ==================== Footer ==================== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a class="brand" href="index.html">
-          <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
+<a class="brand" href="index.html">
+          <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
           MAOSS <em>·</em> Aley
         </a>
-        <p>Maroun Abboud Public High School — committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
+        <p>Maroun Abboud Public High School committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>

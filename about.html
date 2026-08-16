@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Maroun Abboud Public High School, Aley</title>
+ <link rel="icon" type="image/png" href="./assets/MAOSS-logo-circle.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,22 +14,22 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="index.html">
-       <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
-        MAOSS <em>·</em> Aley
+<a class="brand" href="index.html">
+       <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
       </a>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+          <nav class="nav-links">
+        <a href="index.html" >Home</a>
+        <a href="about.html"class="active">About</a>
         <a href="academic.html">Academics</a>
         <a href="admission.html">Admissions</a>
-        <a href="students.html">Students</a>
-        <a href="parent.html">Parents</a>
+        <a href="steam.html">STEAM Lab</a>
+          <a href="students.html">School Life</a>
         <a href="news.html">News &amp; Events</a>
         <a href="staff.html">Staff</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
@@ -36,16 +37,17 @@
       </button>
     </div>
   </header>
-
+<main>
   <div class="nav-backdrop" id="navBackdrop"></div>
   <div class="nav-panel" id="navPanel" aria-hidden="true">
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" >Home</a>
       <a href="about.html" class="active">About</a>
       <a href="academic.html">Academics</a>
-      <a href="admission.html">Admissions</a>
-      <a href="students.html">Students</a>
-      <a href="parent.html">Parents</a>
+<a href="admission.html">Admissions</a>
+      <a href="steam.html">STEAM Lab</a>
+
+       <a href="students.html">School Life</a>
       <a href="news.html">News &amp; Events</a>
       <a href="staff.html">Staff</a>
       <a href="services.html">Services</a>
@@ -55,15 +57,13 @@
 
       <section class="hero">
     <div class="hero-media">
-      <!-- Swap this src for your own photo. object-fit:cover means any
-           image, any aspect ratio, will fill the hero and scale correctly
-           on every screen size without distortion. -->
+    
       <img src="./assets/About_Hero.webp" alt="Maroun Abboud Public High School campus, Aley">
     </div>
     <div class="hero-inner">
       <div class="container">
         <h1>Our Story, Our Purpose</h1>
-        <p class="hero-lede">From a small building near the Aley market to one of the region's most trusted public schools — here's where we've been, and where we're going.</p>
+        <p class="hero-lede">From a small building near the Aley market to one of the region's most trusted public schools here's where we've been, and where we're going.</p>
       </div>
     </div>
   </section>
@@ -75,11 +75,42 @@
     <div><span class="val">+14%</span><span class="lbl">Enrollment growth this year</span></div>
   </div>
 
+  <section class="block feature-cards">
+    <div class="block-head center">
+      <p class="eyebrow">Why MAOSS</p>
+      <h2>Education with trust, rigor, and heart</h2>
+      <p>We blend strong academic standards with character-building support, creating an environment where every student can achieve excellence and belong.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5.5c0 4.25-3 7.5-7 8-4-1-7-4.25-7-8V7l7-4z"/><path d="M12 8v4"/><path d="M10 12l1 1 2-2"/></svg>
+        </span>
+        <h3>Strong academic foundation</h3>
+        <p>Core programs are designed to prepare students for higher education and future leadership with practical skills and intellectual confidence.</p>
+      </article>
+      <article class="feature-card">
+        <span class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c4.97 0 9 5 9 5s-4.03 5-9 5-9-5-9-5 4.03-5 9-5z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </span>
+        <h3>Community-first culture</h3>
+        <p>Students, teachers, and parents work together in a respectful and supportive learning culture grounded in care and accountability.</p>
+      </article>
+      <article class="feature-card">
+        <span class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c2-6 8-10 12-12"/><path d="M8 12c1.5-2.5 4.5-3.5 6-4"/></svg>
+        </span>
+        <h3>Growth and resilience</h3>
+        <p>Our programs emphasize lifelong learning, resilience, and adaptability so students can thrive in an ever-changing world.</p>
+      </article>
+    </div>
+  </section>
+
   <section class="block">
     <div class="block-head">
       <p class="eyebrow">History</p>
       <h2>Six decades on the same hill</h2>
-      <p>Aley Official Secondary School has weathered war, waves of enrollment, and five changes in leadership — and kept teaching straight through all of it.</p>
+      <p>Aley Official Secondary School has weathered war, waves of enrollment, and five changes in leadership and kept teaching straight through all of it.</p>
     </div>
 
     <div class="timeline">
@@ -125,10 +156,20 @@
       </div>
     </div>
 
-    <div class="note">
+    <!--<div class="note">
       <strong>A note on our location:</strong> our campus sits directly on Aley's main road, which gives us a visible, central presence but also some traffic noise. We're working on a second, quieter entrance — though neighboring land ownership has slowed the process.
-    </div>
+    </div>-->
+ 
   </section>
+
+  <section class="location-note">
+  <div class="location-note-inner">
+    <span class="note-label">A Note On Our Location</span>
+    <p>
+      Our campus sits directly on Aley's main road, which gives us a visible, central presence but also some traffic noise. We're working on a second, quieter entrance  though neighboring land ownership has slowed the process.
+    </p>
+  </div>
+</section>
 
   <section class="block">
     <div class="block-head center">
@@ -137,44 +178,119 @@
     </div>
 
     <div class="split">
-      <div class="panel">
-        <p class="eyebrow">Mission</p>
+      <article class="panel">
+        <div class="panel-top">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5V7c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v4.5c0 3.2-1.9 6.2-5 7.4-3.1-1.2-5-4.2-5-7.4z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <p class="eyebrow">Mission</p>
+        </div>
         <h3>What we do every day</h3>
-        <p>We provide a high-quality education that nurtures academic excellence, personal growth, and strong moral values — empowering students with knowledge, critical thinking, and the confidence to succeed in their future studies and careers, while promoting respect, discipline, and responsibility.</p>
-      </div>
-      <div class="panel alt">
-        <p class="eyebrow">Vision</p>
+        <p>We provide a high-quality education that nurtures academic excellence, personal growth, and strong moral values empowering students with knowledge, critical thinking, and the confidence to succeed in their future studies and careers, while promoting respect, discipline, and responsibility.</p>
+      </article>
+      <article class="panel alt">
+        <div class="panel-top">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <p class="eyebrow">Vision</p>
+        </div>
         <h3>What we're building toward</h3>
-        <p>To become a leading educational institution in Lebanon, recognized for academic excellence, innovation, and student development — a safe and inspiring place where students reach their full potential and grow into responsible, creative members of society.</p>
-      </div>
+        <p>To become a leading educational institution in Lebanon, recognized for academic excellence, innovation, and student development a safe and inspiring place where students reach their full potential and grow into responsible, creative members of society.</p>
+      </article>
     </div>
   </section>
 
   <section class="block section-values">
     <div class="block-head center">
-      <p class="eyebrow">What we stand for</p>
-      <h2>Values &amp; Goals</h2>
-      <p>The principles that shape daily life at MAOSS, and what we're working to achieve.</p>
+      <p class="eyebrow">Core Values</p>
+      <h2>Core Values</h2>
+      <p>The principles that guide our institutional culture.</p>
     </div>
 
     <div class="grid">
-      <div class="card"><span class="num">I</span><h4>Excellence</h4><p>We strive for the highest academic and personal standards, in and out of the classroom.</p></div>
-      <div class="card"><span class="num">II</span><h4>Respect</h4><p>We promote mutual respect among students, teachers, and parents alike.</p></div>
-      <div class="card"><span class="num">III</span><h4>Integrity</h4><p>We encourage honesty, responsibility, and strong moral principles.</p></div>
-      <div class="card"><span class="num">IV</span><h4>Growth</h4><p>We support continuous learning and personal development at every level.</p></div>
-      <div class="card"><span class="num">V</span><h4>Discipline</h4><p>We maintain structure and responsibility in daily school life.</p></div>
-      <div class="card"><span class="num">VI</span><h4>Community</h4><p>We build a supportive, inclusive environment for every family we serve.</p></div>
+      <article class="card value-card navy">
+        <div class="card-heading">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2.5l2.8 5.7 6.3.9-4.6 4.5 1 6.3-5.5-2.9-5.5 2.9 1-6.3-4.6-4.5 6.3-.9L12 2.5z"/>
+            </svg>
+          </span>
+          <h4>Excellence</h4>
+        </div>
+        <p>Uncompromising standards in academics and personal development.</p>
+      </article>
+      <article class="card value-card gold">
+        <div class="card-heading">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 12s-1.5-1.5-3-1.5 0 3 0 3 1.5 1.5 3 1.5 3-1.5 3-1.5 1.5 1.5 3 1.5 0-3 0-3-1.5-1.5-3-1.5-3 1.5-3 1.5z"/>
+              <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 12l4 4 4-4"/>
+            </svg>
+          </span>
+          <h4>Respect</h4>
+        </div>
+        <p>Fostering mutual dignity and understanding across our diverse community.</p>
+      </article>
+      <article class="card value-card navy">
+        <div class="card-heading">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z"/>
+              <path fill="#fff" d="M10 11.5l1.5 1.5 3-3 1 1-4 4-1.5-1.5-1.5 1.5-1-1 1.5-1.5z"/>
+            </svg>
+          </span>
+          <h4>Integrity</h4>
+        </div>
+        <p>Upholding honesty, ethical behavior, and moral courage in all actions.</p>
+      </article>
+      <article class="card value-card gold">
+        <div class="card-heading">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22V9.5c0-1.5-1.5-2.5-3-3S6 2 6 2s3 1 3 4c0 3 3 2 3 2s3 1 3-2c0-3 3-4 3-4s-1 1-3 1.5-3 1.5-3 3V22"/>
+            </svg>
+          </span>
+          <h4>Growth</h4>
+        </div>
+        <p>A commitment to lifelong learning, resilience, and adaptability.</p>
+      </article>
+      <article class="card value-card navy">
+        <div class="card-heading">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 7h12M6 12h12M6 17h12"/>
+              <path fill="currentColor" d="M3 4.5h2.5v15H3v-15zm15 0H20v15h-1.5v-15z"/>
+            </svg>
+          </span>
+          <h4>Discipline</h4>
+        </div>
+        <p>Cultivating focus, structure, and responsibility to achieve goals.</p>
+      </article>
+      <article class="card value-card gold">
+        <div class="card-heading">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="8" cy="8" r="3" fill="currentColor"/>
+              <circle cx="16" cy="8" r="3" fill="currentColor"/>
+              <path fill="currentColor" d="M3 20c1.5-4 4.5-6 9-6s7.5 2 9 6H3z"/>
+            </svg>
+          </span>
+          <h4>Community</h4>
+        </div>
+        <p>Building strong, supportive networks that extend beyond the classroom.</p>
+      </article>
     </div>
   </section>
-
+</main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="index.html">
-          <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
+<div class="footer-brand">
+<a class="brand" href="index.html">
+          <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
           MAOSS <em>·</em> Aley
         </a>
-        <p>Maroun Abboud Public High School — committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
+        <p>Maroun Abboud Public High School committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>

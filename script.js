@@ -145,3 +145,131 @@ alert('Oops! Something went wrong. Please try again or email us directly at info
       });
   });
 })();
+
+// Prevent browsers from jumping to scroll positions on refresh
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heroSection = document.querySelector(".steam-hero");
+
+  if (!heroSection) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add class to trigger animation when scrolled into view
+          entry.target.classList.add("in-view");
+        } else {
+          // Remove class when user scrolls away, resetting it for next time
+          entry.target.classList.remove("in-view");
+        }
+      });
+    },
+    {
+      /* rootMargin ensures it ONLY animates 
+         when the section is 100px inside the visible viewport */
+      rootMargin: "0px 0px -100px 0px",
+      threshold: 0.1
+    }
+  );
+
+  observer.observe(heroSection);
+});
+
+
+
+
+
+/* ==========================FOUNDATIONS SECTION==================================*/
+document.addEventListener("DOMContentLoaded", () => {
+  const foundationsSection = document.querySelector(".foundations");
+
+  if (!foundationsSection) return;
+
+  const observer = new IntersectionObserver(
+    (entries, observerInstance) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observerInstance.unobserve(entry.target); // Runs ONLY ONCE
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -80px 0px",
+      threshold: 0.15
+    }
+  );
+
+  observer.observe(foundationsSection);
+});
+
+function resetLocationNoteAnimation() {
+  const noteLabel = document.querySelector('.location-note .note-label');
+  const noteInner = document.querySelector('.location-note-inner');
+  [noteLabel, noteInner].forEach((el) => {
+    if (!el) return;
+    el.style.animation = 'none';
+    void el.offsetWidth;
+    el.style.animation = '';
+  });
+}
+
+window.addEventListener('pageshow', resetLocationNoteAnimation);
+window.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    resetLocationNoteAnimation();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const locationNote = document.querySelector('.location-note');
+  if (!locationNote) return;
+
+  const noteInner = locationNote.querySelector('.location-note-inner');
+  const noteLabel = locationNote.querySelector('.note-label');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        noteInner?.classList.add('in-view');
+        noteLabel?.classList.add('in-view');
+      } else {
+        noteInner?.classList.remove('in-view');
+        noteLabel?.classList.remove('in-view');
+      }
+    });
+  }, {
+    threshold: 0.25
+  });
+
+  observer.observe(locationNote);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const revealElements = document.querySelectorAll(
+    '.block-head, .split .panel, .objective-card, .teaching-grid .card, .block .grid .card, .activity-list li'
+  );
+
+  if (!revealElements.length) return;
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: '0px 0px -80px 0px',
+    }
+  );
+
+  revealElements.forEach((el) => revealObserver.observe(el));
+});

@@ -1,847 +1,1967 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Staff — Maroun Abboud Public High School, Aley</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Space+Grotesk:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles-1.css">
-<style>
-  /* =============================================================
-     Staff page — custom section styles
-     ============================================================= */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  /* ---------- Hero ---------- */
-  .staff-hero{
-    position:relative;
-    /*min-height:clamp(380px, 70vh, 640px);*/
-    min-height: clamp(440px, 82vh, 760px);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    color:#FFFFFF;
-  }
-  .staff-hero-media{
-    position:absolute;
-    inset:0;
-    z-index:0;
-  }
-  .staff-hero-media img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    display:block;
-  }
-  .staff-hero-media::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index:1;
-  }
-  .staff-hero .hero-inner{position:relative;z-index:2; font-family:'Montserrat', sans-serif;}
+  <title>Staff — Maroun Abboud Public High School, Aley</title>
+ <link rel="icon" type="image/png" href="./assets/MAOSS-logo-circle.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  /* ---------- Section shell ---------- */
-  .staff-section{
-    padding:clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
-    max-width:78rem;
-    margin:0 auto;
-  }
-  .staff-section .section-head{
-    text-align:center;
-    max-width:36rem;
-    margin:0 auto 2.5rem;
-  }
-  .staff-section .section-head .eyebrow{color:#8C1520;}
-  .staff-section .section-head h2{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:clamp(1.6rem, 3vw, 2.1rem);
-    margin-top:0.5rem;
-    color:#0F3D26;
-  }
-  .staff-section .section-head p{
-    margin-top:0.7rem;
-    color:#4B4A44;
-    font-family:'Montserrat', sans-serif;
-    font-size:0.95rem;
-    line-height:1.6;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  /* ---------- Section divider ---------- */
-  .section-divider{
-    width:50px;
-    height:2px;
-    background:linear-gradient(90deg, #C41E2A, #1C6B3B);
-    margin:0 auto 0.4rem;
-  }
+  <link rel="stylesheet" href="styles-1.css">
 
-  /* ---------- Leadership cards ---------- */
-  .leadership-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:1.5rem;
-    max-width:52rem;
-    margin:0 auto;
-  }
-  @media(min-width:640px){
-    .leadership-grid{grid-template-columns:1fr 1fr;}
-  }
-  .lead-card{
-    background:#FFFFFF;
-    border:1px solid #E2DBC7;
-    border-top:3px solid #1C6B3B;
-    padding:2rem 1.8rem;
-    text-align:center;
-    transition:transform 0.25s ease, border-color 0.25s ease;
-  }
-  .lead-card:hover{
-    transform:translateY(-3px);
-    border-top-color:#C41E2A;
-  }
-  .lead-card .lead-icon{
-    font-size:2.2rem;
-    display:block;
-    margin-bottom:0.8rem;
-  }
-  .lead-card h3{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:1.15rem;
-    color:#1C1B18;
-    margin-bottom:0.2rem;
-  }
-  .lead-card .lead-title{
-    font-family:'Space Grotesk', sans-serif;
-    font-size:0.78rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:#C41E2A;
-    font-weight:600;
-    margin-bottom:0.6rem;
-  }
-  .lead-card p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.9rem;
-    color:#4B4A44;
-    line-height:1.55;
-  }
+  <style>
 
-  /* ---------- Department grid ---------- */
-  .dept-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:1rem;
-  }
-  @media(min-width:540px){.dept-grid{grid-template-columns:1fr 1fr;}}
-  @media(min-width:960px){.dept-grid{grid-template-columns:1fr 1fr 1fr;}}
+    /* =========================================================
+       MAOSS — STAFF PAGE
+       Professional Institutional Design
+       ========================================================= */
 
-  .dept-card{
-    background:#FFFFFF;
-    border:1px solid #E2DBC7;
-    border-left:4px solid #1C6B3B;
-    padding:1.4rem 1.4rem;
-    transition:transform 0.25s ease, border-left-color 0.25s ease, box-shadow 0.25s ease;
-  }
-  .dept-card:hover{
-    transform:translateY(-3px);
-    border-left-color:#C41E2A;
-    box-shadow:0 12px 24px -18px rgba(20,42,34,0.3);
-  }
-  .dept-card .dept-icon{
-    font-size:1.6rem;
-    display:block;
-    margin-bottom:0.4rem;
-  }
-  .dept-card h4{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:1rem;
-    color:#1C1B18;
-    margin-bottom:0.3rem;
-  }
-  .dept-card p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.88rem;
-    color:#4B4A44;
-    line-height:1.5;
-  }
+    :root{
+      --navy:#0d2949;
+      --navy-dark:#071d35;
+      --burgundy:#8C1520;
+      --gold:#d8b56a;
+      --gold-light:#ead7a5;
+      --cream:#f7f5ef;
+      --white:#ffffff;
+      --text:#24303b;
+      --muted:#68717a;
+      --line:#dfe2e5;
+    }
 
-  /* ---------- Staff stats ---------- */
-  .staff-stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1rem;
-    max-width:48rem;
-    margin:0 auto;
-  }
-  @media(min-width:640px){.staff-stats{grid-template-columns:repeat(4,1fr);}}
-  .staff-stat{
-    background:#FFFFFF;
-    border:1px solid #E2DBC7;
-    text-align:center;
-    padding:1.8rem 1rem;
-    transition:transform 0.25s ease;
-  }
-  .staff-stat:hover{transform:translateY(-2px);}
-  .staff-stat .stat-val{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:1.8rem;
-    color:#0F3D26;
-    display:block;
-  }
-  .staff-stat .stat-lbl{
-    font-family:'Space Grotesk', sans-serif;
-    font-size:0.7rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:#6B6A63;
-    margin-top:0.3rem;
-    display:block;
-  }
+    *{
+      box-sizing:border-box;
+    }
 
-  /* ---------- Message from principal ---------- */
-  .principal-message{
-    background:#0F3D26;
-    border-radius:14px;
-    padding:2.5rem 2rem;
-    color:#FFFFFF;
-    max-width:48rem;
-    margin:0 auto;
-    position:relative;
-  }
-  .principal-message::before{
-    content:"\201C";
-    font-family:'Fraunces', serif;
-    font-size:4rem;
-    color:#DFBA73;
-    position:absolute;
-    top:0.5rem;
-    left:1.2rem;
-    line-height:1;
-    opacity:0.6;
-  }
-  .principal-message .msg-icon{
-    font-size:2.2rem;
-    display:block;
-    margin-bottom:0.8rem;
-  }
-  .principal-message h3{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:1.2rem;
-    margin-bottom:0.6rem;
-  }
-  .principal-message p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.95rem;
-    color:#DCE3D9;
-    max-width:32rem;
-    margin:0 auto;
-    line-height:1.7;
-  }
-  .principal-message .msg-signoff{
-    font-family:'Space Grotesk', sans-serif;
-    font-size:0.85rem;
-    color:#DFBA73;
-    margin-top:1.2rem;
-    letter-spacing:0.03em;
-  }
+    body{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      color:var(--text);
+    }
 
-  /* ---------- Professional development cards ---------- */
-  .pd-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:1.2rem;
-  }
-  @media(min-width:640px){.pd-grid{grid-template-columns:1fr 1fr;}}
-  .pd-card{
-    background:#FFFFFF;
-    border:1px solid #E2DBC7;
-    border-top:3px solid #B8860B;
-    padding:1.6rem 1.5rem;
-    display:flex;
-    align-items:flex-start;
-    gap:1rem;
-    transition:transform 0.25s ease, border-color 0.25s ease;
-  }
-  .pd-card:hover{
-    transform:translateX(4px);
-    border-top-color:#1C6B3B;
-  }
-  .pd-card .pd-icon{
-    font-size:1.6rem;
-    flex-shrink:0;
-    line-height:1;
-    margin-top:0.1rem;
-  }
-  .pd-card h4{
-    font-family:'Montserrat', sans-serif;
-    font-weight:500;
-    font-size:0.98rem;
-    color:#1C1B18;
-    margin-bottom:0.2rem;
-  }
-  .pd-card p{
-    font-family:'Montserrat', sans-serif;
-    font-size:0.88rem;
-    color:#4B4A44;
-    line-height:1.5;
-    margin:0;
-  }
 
-  /* ---------- Language code icons (AE, EN, FR, IT) ---------- */
-  .dept-icon .lang-icon{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700;
-    font-size:0.8rem;
-    letter-spacing:0.06em;
-    width:2rem;
-    height:2rem;
-    border-radius:6px;
-    background:linear-gradient(135deg, #E8F5E9, #C8E6C9);
-    color:#1B5E20;
-    box-shadow:0 2px 6px rgba(27,94,32,0.12);
-    transition:transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .dept-card:hover .dept-icon .lang-icon{
-    transform:scale(1.08);
-    box-shadow:0 4px 12px rgba(27,94,32,0.2);
-  }
-</style>
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .staff-hero{
+      position:relative;
+      min-height:clamp(440px,82vh,760px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      color:#ffffff;
+    }
+
+    .staff-hero-media{
+      position:absolute;
+      inset:0;
+      z-index:0;
+    }
+
+    .staff-hero-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+
+    .staff-hero-media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+     background:rgba(0, 0, 0, 0.58);
+    }
+
+    .staff-hero::before{
+      content:"";
+      position:absolute;
+      width:520px;
+      height:520px;
+      border:1px solid rgba(216,181,106,.18);
+      border-radius:50%;
+      right:-180px;
+      bottom:-220px;
+      z-index:1;
+    }
+
+    .staff-hero::after{
+      content:"";
+      position:absolute;
+      width:300px;
+      height:300px;
+      border:1px solid rgba(216,181,106,.12);
+      border-radius:50%;
+      right:30px;
+      bottom:-150px;
+      z-index:1;
+    }
+
+    .staff-hero .hero-inner{
+      position:relative;
+      z-index:3;
+      width:100%;
+    }
+
+    .staff-hero .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 40px;
+    }
+
+    .staff-hero .hero-eyebrow{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:20px;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--gold-light);
+    }
+
+    .staff-hero .hero-eyebrow::before{
+      content:"";
+      width:46px;
+      height:1px;
+      background:var(--gold);
+    }
+
+    .staff-hero h1{
+      margin:0;
+      max-width:800px;
+      font-family:'Montserrat',sans-serif;
+      font-weight:500;
+      /*font-size:clamp(2.2rem,4vw,3.25rem);*/
+      font-size: clamp(2rem, 5.2vw, 3.6rem);
+      line-height:1.1;
+      letter-spacing:-.025em;
+    }
+
+    .staff-hero .hero-lede{
+      max-width:650px;
+      margin:25px 0 0;
+      font-size:clamp(.95rem,1.5vw,1.08rem);
+      line-height:1.8;
+      color:rgba(255,255,255,.84);
+    }
+
+
+    /* =========================================================
+       GENERAL SECTION
+       ========================================================= */
+
+    .staff-section{
+      width:100%;
+      padding:clamp(80px,9vw,125px) 30px;
+    }
+
+    .staff-section.alt-bg{
+      background:var(--cream);
+    }
+
+    .staff-section.dark-section{
+      background:var(--navy);
+      color:#ffffff;
+    }
+
+    .staff-section-inner{
+      width:min(1180px,100%);
+      margin:0 auto;
+    }
+
+
+    /* =========================================================
+       PROFESSIONAL SECTION HEAD
+       ========================================================= */
+
+    .section-head{
+      max-width:760px;
+      margin:0 auto 55px;
+      text-align:center;
+    }
+
+
+    /* =========================================================
+       EYEBROW
+       Consistent with the rest of the website
+       ========================================================= */
+
+    .section-eyebrow{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+
+      margin:0 0 18px;
+
+      font-family:'Montserrat',sans-serif;
+      color:#8C1520;
+      font-size:13px;
+      font-weight:700;
+      line-height:1.2;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+    }
+
+    .section-eyebrow::before,
+    .section-eyebrow::after{
+      content:"";
+      width:42px;
+      height:1px;
+      background:#d8b56a;
+    }
+
+
+    /* =========================================================
+       SECTION TITLE
+       ========================================================= */
+
+    .section-head h2{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      font-weight:500;
+      font-size:clamp(2.2rem,4vw,3.25rem);
+      line-height:1.1;
+      letter-spacing:-.025em;
+      color:#0d2949;
+    }
+
+
+    /* =========================================================
+       SECTION DESCRIPTION
+       Does NOT affect the eyebrow
+       ========================================================= */
+
+    .section-head > p:not(.section-eyebrow){
+      margin:20px auto 0;
+      max-width:680px;
+
+      font-family:'Montserrat',sans-serif;
+      font-size:.94rem;
+      font-weight:400;
+      line-height:1.8;
+
+      letter-spacing:normal;
+      text-transform:none;
+
+      color:#68717a;
+    }
+
+
+    /* =========================================================
+       DARK SECTIONS
+       Eyebrow keeps the same burgundy identity
+       ========================================================= */
+
+    .dark-section .section-eyebrow{
+      color:#8C1520;
+    }
+
+    .dark-section .section-head h2{
+      color:#ffffff;
+    }
+
+    .dark-section .section-head > p:not(.section-eyebrow){
+      color:rgba(255,255,255,.72);
+    }
+
+
+    /* =========================================================
+       AT A GLANCE
+       ========================================================= */
+
+    .overview-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid  #2e4862;
+      border-bottom:1px solid  #2e4862;
+    }
+
+    .overview-stat{
+      position:relative;
+      padding:38px 24px;
+      text-align:center;
+    }
+
+    .overview-stat:not(:last-child)::after{
+      content:"";
+      position:absolute;
+      top:25%;
+      right:0;
+      width:1px;
+      height:50%;
+      background:#2e4862;
+    }
+
+    .overview-number{
+      display:block;
+      margin-bottom:9px;
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(2rem,4vw,3rem);
+      font-weight:500;
+      line-height:1;
+      color:var(--navy);
+    }
+
+    .overview-label{
+      display:block;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+
+    /* =========================================================
+       ICON SYSTEM
+       ========================================================= */
+
+    .staff-icon{
+      width:24px;
+      height:24px;
+      display:block;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:1.6;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .icon-frame{
+      width:54px;
+      height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(216,181,106,.55);
+      color:var(--gold);
+      flex-shrink:0;
+    }
+
+
+    /* =========================================================
+       LEADERSHIP
+       ========================================================= */
+
+    .leadership-feature{
+      display:grid;
+      grid-template-columns:minmax(360px,.95fr) minmax(350px,1.05fr);
+      background:#ffffff;
+      border:1px solid var(--line);
+      overflow:hidden;
+    }
+
+
+    /* =========================================================
+       LEADER PHOTO
+       ========================================================= */
+
+    .leader-photo{
+      position:relative;
+      background:var(--navy-dark);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+    }
+
+    .leader-photo img{
+      width:100%;
+      height:auto;
+      aspect-ratio:16 / 9;
+      object-fit:contain;
+      object-position:center;
+      display:block;
+      background:var(--navy-dark);
+    }
+
+    .leader-photo::after{
+      content:"";
+      width:48px;
+      height:2px;
+      background:var(--gold);
+      margin:18px 0 0 28px;
+    }
+
+
+    /* =========================================================
+       PHOTO CAPTION
+       ========================================================= */
+
+    .leader-photo-caption{
+      padding:12px 28px 24px;
+      background:#ffffff;
+    }
+
+    .leader-photo-caption p{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      font-size:11px;
+      font-weight:600;
+      line-height:1.7;
+      letter-spacing:.02em;
+      color:var(--muted);
+    }
+
+    .leader-photo-caption strong{
+      color:var(--navy);
+      font-weight:700;
+    }
+
+    .leader-photo-caption span{
+      color:var(--burgundy);
+    }
+
+
+    /* =========================================================
+       LEADER CONTENT
+       ========================================================= */
+
+    .leader-content{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:clamp(35px,5vw,70px);
+    }
+
+    .leader-kicker{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:22px;
+      color:var(--burgundy);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .leader-kicker::before{
+      content:"";
+      width:32px;
+      height:1px;
+      background:var(--gold);
+    }
+
+    .leader-content h3{
+      margin:0;
+      color:var(--navy);
+      font-size:clamp(1.7rem,3vw,2.35rem);
+      font-weight:500;
+      line-height:1.2;
+    }
+
+    .leader-role{
+      display:block;
+      margin-top:9px;
+      color:var(--burgundy);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .leader-content p{
+      margin:26px 0 0;
+      max-width:580px;
+      color:var(--muted);
+      font-size:.94rem;
+      line-height:1.85;
+    }
+
+    .leader-line{
+      width:70px;
+      height:2px;
+      margin-top:30px;
+      background:var(--gold);
+    }
+
+
+    /* =========================================================
+       FOUNDING LEGACY
+       ========================================================= */
+
+    .legacy-block{
+      display:grid;
+      grid-template-columns:130px 1fr;
+      gap:35px;
+      margin-top:28px;
+      padding:38px;
+      background:var(--navy);
+      color:#ffffff;
+    }
+
+    .legacy-year{
+      font-size:clamp(2rem,4vw,3rem);
+      font-weight:500;
+      color:var(--gold);
+      line-height:1;
+    }
+
+    .legacy-content h3{
+      margin:0;
+      font-size:1.35rem;
+      font-weight:500;
+    }
+
+    .legacy-content .legacy-role{
+      display:block;
+      margin-top:7px;
+      color:var(--gold-light);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .legacy-content p{
+      margin:17px 0 0;
+      max-width:700px;
+      color:rgba(255,255,255,.72);
+      font-size:.88rem;
+      line-height:1.75;
+    }
+
+
+    /* =========================================================
+       ADMINISTRATIVE ROLES
+       ========================================================= */
+
+    .role-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .role-card{
+      display:flex;
+      align-items:flex-start;
+      gap:20px;
+      padding:30px;
+      background:#ffffff;
+      border:1px solid var(--line);
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .role-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(216,181,106,.75);
+      box-shadow:0 18px 40px rgba(13,41,73,.08);
+    }
+
+    .role-card .icon-frame{
+      color:var(--navy);
+      border-color:#d7dde2;
+    }
+
+    .role-card h3{
+      margin:0;
+      color:var(--navy);
+      font-size:1.02rem;
+      font-weight:600;
+    }
+
+    .role-card p{
+      margin:9px 0 0;
+      color:var(--muted);
+      font-size:.84rem;
+      line-height:1.65;
+    }
+
+
+    /* =========================================================
+       MESSAGE FROM HEADMISTRESS
+       ========================================================= */
+
+    .headmistress-message{
+      position:relative;
+      max-width:930px;
+      margin:0 auto;
+      padding:clamp(45px,7vw,80px);
+      background:var(--navy-dark);
+      overflow:hidden;
+      text-align:center;
+    }
+
+    .headmistress-message::before,
+    .headmistress-message::after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(216,181,106,.13);
+      border-radius:50%;
+    }
+
+    .headmistress-message::before{
+      width:370px;
+      height:370px;
+      top:-220px;
+      right:-130px;
+    }
+
+    .headmistress-message::after{
+      width:270px;
+      height:270px;
+      bottom:-180px;
+      left:-100px;
+    }
+
+    .quote-mark{
+      position:relative;
+      z-index:2;
+      font-size:62px;
+      line-height:.7;
+      font-weight:500;
+      color:var(--gold);
+    }
+
+    .headmistress-message blockquote{
+      position:relative;
+      z-index:2;
+      max-width:760px;
+      margin:25px auto 0;
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(1.1rem,2vw,1.5rem);
+      font-weight:400;
+      line-height:1.8;
+      color:#ffffff;
+    }
+
+    .message-signoff{
+      position:relative;
+      z-index:2;
+      margin-top:30px;
+      color:var(--gold-light);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+
+    /* =========================================================
+       ACADEMIC DEPARTMENTS
+       ========================================================= */
+
+    .department-list{
+      border-top:1px solid #2e4862;
+    }
+
+    .department-item{
+      display:grid;
+      grid-template-columns:90px 90px 1fr;
+      align-items:center;
+      gap:25px;
+      padding:34px 10px;
+      border-bottom:1px solid #2e4862;
+      transition:padding .25s ease;
+    }
+
+    .department-item:hover{
+      padding-left:22px;
+      padding-right:22px;
+    }
+
+    .department-number{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.1em;
+      color:var(--gold);
+    }
+
+    .department-icon{
+      width:56px;
+      height:56px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      border:1px solid #d9dee3;
+    }
+
+    .department-icon .staff-icon{
+      width:27px;
+      height:27px;
+    }
+
+    .department-content h3{
+      margin:0;
+      color:var(--navy);
+      font-size:1.25rem;
+      font-weight:500;
+    }
+
+    .department-content p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:.86rem;
+      line-height:1.6;
+    }
+
+
+    /* =========================================================
+       PROFESSIONAL DEVELOPMENT
+       ========================================================= */
+
+    .development-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid rgba(255,255,255,.16);
+      border-left:1px solid rgba(255,255,255,.16);
+    }
+
+    .development-item{
+      display:grid;
+      grid-template-columns:55px 1fr;
+      gap:20px;
+      padding:38px;
+      border-right:1px solid rgba(255,255,255,.16);
+      border-bottom:1px solid rgba(255,255,255,.16);
+    }
+
+    .development-number{
+      color:var(--gold);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+    }
+
+    .development-item h3{
+      margin:0;
+      color:#ffffff;
+      font-size:1.02rem;
+      font-weight:600;
+    }
+
+    .development-item p{
+      margin:10px 0 0;
+      color:rgba(255,255,255,.65);
+      font-size:.84rem;
+      line-height:1.7;
+    }
+
+
+    /* =========================================================
+       COMMITMENT
+       ========================================================= */
+
+    .commitment{
+      max-width:850px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .commitment-icon{
+      width:58px;
+      height:58px;
+      margin:0 auto 25px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid var(--gold);
+      color:var(--burgundy);
+    }
+
+    .commitment h2{
+      margin:0;
+      color:var(--navy);
+      font-size:clamp(1.7rem,3vw,2.2rem);
+      font-weight:500;
+    }
+
+    .commitment p{
+      max-width:700px;
+      margin:20px auto 0;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.8;
+    }
+
+
+    /* =========================================================
+       CLOSING
+       ========================================================= */
+
+    .staff-closing{
+      position:relative;
+      overflow:hidden;
+      margin-bottom:0;
+      padding:clamp(85px,10vw,125px) 30px;
+      background:var(--navy-dark);
+      color:#ffffff;
+      text-align:center;
+    }
+
+    .staff-closing::before,
+    .staff-closing::after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(216,181,106,.12);
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    .staff-closing::before{
+      width:600px;
+      height:600px;
+      left:-310px;
+      top:-250px;
+    }
+
+    .staff-closing::after{
+      width:480px;
+      height:480px;
+      right:-240px;
+      bottom:-280px;
+    }
+
+    .closing-inner{
+      position:relative;
+      z-index:2;
+      max-width:850px;
+      margin:0 auto;
+    }
+
+    .closing-eyebrow{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      margin-bottom:25px;
+
+      color:#8C1520;
+      font-size:13px;
+      font-weight:700;
+      line-height:1.2;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .closing-eyebrow::before,
+    .closing-eyebrow::after{
+      content:"";
+      width:42px;
+      height:1px;
+      background:var(--gold);
+    }
+
+    .staff-closing blockquote{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(1.15rem,2.2vw,1.55rem);
+      font-weight:400;
+      line-height:1.8;
+      color:#ffffff;
+    }
+
+    .staff-closing .signoff{
+      margin:30px 0 0;
+      color:var(--gold);
+      font-size:.85rem;
+      font-weight:600;
+      letter-spacing:.05em;
+    }
+
+    .staff-closing .signoff span{
+      display:block;
+      margin-top:7px;
+      color:rgba(255,255,255,.55);
+      font-size:.75rem;
+      font-weight:400;
+      letter-spacing:.02em;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media(max-width:900px){
+
+      .overview-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .overview-stat:nth-child(2)::after{
+        display:none;
+      }
+
+      .overview-stat:nth-child(-n+2){
+        border-bottom:1px solid var(--line);
+      }
+
+      .leadership-feature{
+        grid-template-columns:1fr;
+      }
+
+      .leader-photo img{
+        aspect-ratio:16 / 9;
+      }
+
+      .department-item{
+        grid-template-columns:65px 70px 1fr;
+      }
+
+    }
+
+
+    @media(max-width:700px){
+
+      .staff-section{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .staff-hero .container{
+        padding:0 24px;
+      }
+
+      .staff-hero h1{
+        font-size:clamp(2.2rem,9vw,3.25rem);
+      }
+
+      .overview-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .overview-stat{
+        padding:28px 12px;
+      }
+
+      .role-grid{
+        grid-template-columns:1fr;
+      }
+
+      .legacy-block{
+        grid-template-columns:1fr;
+        gap:15px;
+        padding:30px;
+      }
+
+      .development-list{
+        grid-template-columns:1fr;
+      }
+
+      .development-item{
+        padding:30px 25px;
+      }
+
+      .department-item{
+        grid-template-columns:45px 58px 1fr;
+        gap:15px;
+        padding:28px 5px;
+      }
+
+      .department-icon{
+        width:50px;
+        height:50px;
+      }
+
+      .department-content h3{
+        font-size:1.05rem;
+      }
+
+    }
+
+
+    @media(max-width:480px){
+
+      .section-eyebrow::before,
+      .section-eyebrow::after,
+      .closing-eyebrow::before,
+      .closing-eyebrow::after{
+        width:25px;
+      }
+
+      .overview-grid{
+        grid-template-columns:1fr;
+      }
+
+      .overview-stat{
+        border-bottom:1px solid var(--line);
+      }
+
+      .overview-stat:last-child{
+        border-bottom:0;
+      }
+
+      .overview-stat::after{
+        display:none !important;
+      }
+
+      .leader-photo img{
+        aspect-ratio:16 / 9;
+      }
+
+      .leader-photo-caption{
+        padding:10px 20px 22px;
+      }
+
+      .leader-photo-caption p{
+        font-size:10px;
+      }
+
+      .leader-content{
+        padding:35px 25px;
+      }
+
+      .role-card{
+        padding:25px 20px;
+      }
+
+      .department-item{
+        grid-template-columns:35px 52px 1fr;
+        gap:12px;
+      }
+
+      .department-number{
+        font-size:10px;
+      }
+
+      .department-icon{
+        width:48px;
+        height:48px;
+      }
+
+      .department-icon .staff-icon{
+        width:23px;
+        height:23px;
+      }
+
+      .department-content p{
+        font-size:.78rem;
+      }
+
+      .headmistress-message{
+        padding:45px 25px;
+      }
+
+    }
+
+  </style>
 </head>
+
+
 <body>
 
-  <!-- ==================== Header ==================== -->
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
   <header class="site-header">
+
     <div class="nav-inner">
+
       <a class="brand" href="index.html">
-        <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
-        MAOSS <em>·</em> Aley
+        <img src="./assets/MAOSS-logo-circle.png" alt="MAOSS Aley crest">
       </a>
 
       <nav class="nav-links">
+
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="academic.html">Academics</a>
         <a href="admission.html">Admissions</a>
-        <a href="students.html">Students</a>
-        <a href="parent.html">Parents</a>
+        <a href="steam.html">STEAM Lab</a>
+        <a href="students.html">School Life</a>
         <a href="news.html">News &amp; Events</a>
         <a href="staff.html" class="active">Staff</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+
       </nav>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        aria-label="Open menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
       </button>
+
     </div>
+
   </header>
 
+<main>
   <div class="nav-backdrop" id="navBackdrop"></div>
+
   <div class="nav-panel" id="navPanel" aria-hidden="true">
+
     <nav>
+
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="academic.html">Academics</a>
       <a href="admission.html">Admissions</a>
-      <a href="students.html">Students</a>
-      <a href="parent.html">Parents</a>
+      <a href="steam.html">STEAM Lab</a>
+      <a href="students.html">School Life</a>
       <a href="news.html">News &amp; Events</a>
       <a href="staff.html" class="active">Staff</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
+
     </nav>
+
   </div>
 
-  <!-- ==================== Hero ==================== -->
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+
   <section class="staff-hero">
+
     <div class="staff-hero-media">
-      <!-- Replace src with your hero image path -->
-      <img src="./assets/staff.jpg" alt="Maroun Abboud Public High School staff">
+
+      <img
+        src="./assets/staff.jpg"
+        alt="Maroun Abboud Public High School staff">
+
     </div>
+
     <div class="hero-inner">
+
       <div class="container">
-        <h1 style="font-family:'Montserrat', sans-serif;font-weight:500;
-  font-size:clamp(1.5rem, 5.2vw, 3.6rem);
-  line-height:1.12;
-  letter-spacing:-0.01em;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 
-               0 2px 4px rgba(0, 0, 0, 0.2);">Our Staff</h1>
-        <p class="hero-lede">Meet the dedicated educators and administrators who make Maroun Abboud Public High School a place of excellence, growth, and opportunity.</p>
+
+
+        <h1>
+          The people behind<br>
+          the MAOSS experience.
+        </h1>
+
+        <p class="hero-lede">
+          Meet the educators and school professionals whose knowledge,
+          dedication, and collaboration shape the learning experience
+          of every student at Maroun Abboud Public High School.
+        </p>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- =============================================================
-       SECTION — Staff at a Glance
-       ============================================================= -->
-  <section class="staff-section" id="overview">
-    <div class="section-head">
-      <div class="section-divider"></div>
-      <p class="eyebrow">At a Glance</p>
-      <h2>👩‍🏫 Our Team</h2>
-      <p>Maroun Abboud Secondary School (MAOSS) — Aley is proud to have a team of highly qualified and dedicated professionals who work together to provide the best educational experience for every student.</p>
-    </div>
 
-    <div class="staff-stats">
-      <div class="staff-stat">
-        <span class="stat-val">67</span>
-        <span class="stat-lbl">Staff Members</span>
-      </div>
-      <div class="staff-stat">
-        <span class="stat-val">96%</span>
-        <span class="stat-lbl">Hold University Degrees</span>
-      </div>
-      <div class="staff-stat">
-        <span class="stat-val">30+</span>
-        <span class="stat-lbl">Years Average Experience</span>
-      </div>
-      <div class="staff-stat">
-        <span class="stat-val">15+</span>
-        <span class="stat-lbl">Subjects Taught</span>
-      </div>
-    </div>
-  </section>
+  <!-- =========================================================
+       AT A GLANCE
+       ========================================================= -->
 
-  <!-- =============================================================
-       SECTION — School Leadership
-       ============================================================= -->
   <section class="staff-section">
-    <div class="section-head">
-      <p class="eyebrow">Administration</p>
-      <h2>🏛️ School Leadership</h2>
-      <p>Our leadership team is committed to guiding the school with vision, integrity, and a deep commitment to student success.</p>
+
+    <div class="staff-section-inner">
+
+      <div class="section-head">
+
+        <p class="section-eyebrow">
+          At a Glance
+        </p>
+
+        <h2>
+          Our Team
+        </h2>
+
+        <p>
+          A dedicated community of educators and professionals working
+          together to support academic excellence, personal growth,
+          and a strong school community.
+        </p>
+
+      </div>
+
+
+      <div class="overview-grid">
+
+        <div class="overview-stat">
+          <span class="overview-number">67</span>
+          <span class="overview-label">Staff Members</span>
+        </div>
+
+        <div class="overview-stat">
+          <span class="overview-number">96%</span>
+          <span class="overview-label">University Degrees</span>
+        </div>
+
+        <div class="overview-stat">
+          <span class="overview-number">30+</span>
+          <span class="overview-label">Years Average Experience</span>
+        </div>
+
+        <div class="overview-stat">
+          <span class="overview-number">15+</span>
+          <span class="overview-label">Subjects Taught</span>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="leadership-grid">
-      <div class="lead-card">
-        <span class="lead-icon">👩‍🏫</span>
-        <h3>Dr. Sanaa Shehayeb</h3>
-        <span class="lead-title">Headmistress</span>
-        <p>Dr. Shehayeb leads MAOSS with a vision of academic excellence, character development, and community partnership. Under her leadership, enrollment has grown by 14% this year.</p>
-      </div>
-
-      <div class="lead-card">
-        <span class="lead-icon">🧑‍🏫</span>
-        <h3>Mr. Khaled Abd El Samad</h3>
-        <span class="lead-title">Founding Principal (1969–1975)</span>
-        <p>Founded the school in 1969 and established its strong foundation in French and English secondary education. His vision shaped the school's early identity and growth.</p>
-      </div>
-
-      <div class="lead-card">
-        <span class="lead-icon">📚</span>
-        <h3>Academic Administrators</h3>
-        <span class="lead-title">Administrative Team</span>
-        <p>A dedicated team overseeing curriculum development, student affairs, examination coordination, and daily academic operations.</p>
-      </div>
-
-      <div class="lead-card">
-        <span class="lead-icon">🤝</span>
-        <h3>Student Affairs Office</h3>
-        <span class="lead-title">Student Support Team</span>
-        <p>Responsible for student guidance, discipline, extracurricular coordination, and ensuring a supportive school environment for all students.</p>
-      </div>
-    </div>
   </section>
 
-  <!-- =============================================================
-       SECTION — Message from the Headmistress
-       ============================================================= -->
-  <section class="staff-section" style="padding-top:0;">
-    <div class="principal-message">
-      <span class="msg-icon">💬</span>
-      <h3>A Message from Our Headmistress</h3>
-      <p>Our staff is the heart of Maroun Abboud Public High School. Every day, our teachers and administrators work tirelessly to create a nurturing environment where students can grow academically, socially, and personally. I am proud to lead such a committed and talented team, and I am confident that together we will continue to raise a generation grounded in knowledge, character, and purpose.</p>
-      <div class="msg-signoff">— Dr. Sanaa Shehayeb, Headmistress</div>
-    </div>
-  </section>
 
-  <!-- =============================================================
-       SECTION — Academic Departments
-       ============================================================= -->
-  <section class="staff-section">
-    <div class="section-head">
-      <p class="eyebrow">Departments</p>
-      <h2>📖 Academic Departments</h2>
-      <p>Our academic staff is organized into specialized departments, each led by experienced educators passionate about their field.</p>
-    </div>
+  <!-- =========================================================
+       LEADERSHIP
+       ========================================================= -->
 
-    <div class="dept-grid">
-      <div class="dept-card">
-        <span class="dept-icon">🔬</span>
-        <h4>Science Department</h4>
-        <p>Physics, Chemistry, and Biology — preparing students for medical and scientific careers through rigorous theory and hands-on lab work.</p>
-      </div>
-      <div class="dept-card">
-        <span class="dept-icon">📐</span>
-        <h4>Mathematics Department</h4>
-        <p>Algebra, Geometry, Trigonometry, and Calculus — building analytical thinking and problem-solving skills essential for academic success.</p>
-      </div>
-      <div class="dept-card">
-        <span class="dept-icon">📖</span>
-        <h4>Languages Department</h4>
-        <p>Arabic, English, French, and Italian — developing multilingual communication skills through literature, composition, grammar, and oral expression.</p>
-      </div>
-      <div class="dept-card">
-        <span class="dept-icon">🌍</span>
-        <h4>Humanities Department</h4>
-        <p>History, Geography, Sociology, and Philosophy — fostering critical thinking and a deep understanding of society and human culture.</p>
-      </div>
-      <div class="dept-card">
-        <span class="dept-icon">💻</span>
-        <h4>Technology &amp; Computer Science</h4>
-        <p>Digital literacy, coding fundamentals, and computer-based learning to prepare students for the modern digital world.</p>
-      </div>
-      <div class="dept-card">
-        <span class="dept-icon">🎨</span>
-        <h4>Arts &amp; Physical Education</h4>
-        <p>Creative expression through art and music, alongside physical fitness and sports education for holistic student development.</p>
-      </div>
-    </div>
-  </section>
+  <section class="staff-section alt-bg">
 
-  <!-- =============================================================
-       SECTION — Professional Development
-       ============================================================= -->
-  <section class="staff-section">
-    <div class="section-head">
-      <p class="eyebrow">Growth</p>
-      <h2>📈 Professional Development</h2>
-      <p>We invest in our staff's continuous growth to ensure they remain at the forefront of educational best practices.</p>
-    </div>
+    <div class="staff-section-inner">
 
-    <div class="pd-grid">
-      <div class="pd-card">
-        <span class="pd-icon">🎓</span>
-        <div>
-          <h4>Ongoing Training &amp; Workshops</h4>
-          <p>Teachers participate in regular professional development sessions covering modern teaching methodologies, classroom management, and educational technology.</p>
-        </div>
-      </div>
-      <div class="pd-card">
-        <span class="pd-icon">🤝</span>
-        <div>
-          <h4>Collaborative Planning</h4>
-          <p>Departmental meetings and cross-curricular collaboration ensure cohesive lesson planning and sharing of best practices across subjects.</p>
-        </div>
-      </div>
-      <div class="pd-card">
-        <span class="pd-icon">📊</span>
-        <div>
-          <h4>Performance Evaluation</h4>
-          <p>Regular assessments and constructive feedback help staff members identify strengths and areas for professional growth.</p>
-        </div>
-      </div>
-      <div class="pd-card">
-        <span class="pd-icon">🏆</span>
-        <div>
-          <h4>Recognition &amp; Awards</h4>
-          <p>Outstanding staff contributions are recognized annually, celebrating dedication, innovation, and excellence in teaching.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="section-head">
 
-  <!-- =============================================================
-       SECTION — Teachers Directory
-       ============================================================= -->
-  <section class="staff-section">
-    <div class="section-head">
-      <p class="eyebrow">Directory</p>
-      <h2>👩‍🏫 Teachers Directory</h2>
-      <p>Maroun Abboud Secondary School (MAOSS) — Aley, our teaching staff is dedicated to providing high-quality education, guidance, and support to every student. Our teachers are experienced professionals who help students achieve academic excellence and personal growth.</p>
-    </div>
+        <p class="section-eyebrow">
+          Leadership
+        </p>
 
-    <!-- Administration & Leadership -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>📚 School Administration &amp; Leadership</h2>
-      </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon">👨‍🏫</span>
-          <h4>Principal — School Leadership &amp; Management</h4>
-          <p>Oversees all school operations, strategic planning, and community relations to ensure a thriving educational environment.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">🧭</span>
-          <h4>Vice Principal — Academic &amp; Discipline Supervision</h4>
-          <p>Supports the principal in maintaining academic standards and student discipline across all grade levels.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">📊</span>
-          <h4>Academic Coordinator — Curriculum &amp; Teaching Quality</h4>
-          <p>Coordinates curriculum implementation, monitors teaching quality, and leads instructional improvement initiatives.</p>
-        </div>
-      </div>
-    </div>
+        <h2>
+          School Leadership
+        </h2>
 
-    <!-- Mathematics Department -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>🧮 Mathematics Department</h2>
-        <p>Our Math teachers focus on developing logical thinking and problem-solving skills.</p>
-      </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon">➗</span>
-          <h4>Algebra &amp; Geometry Teachers</h4>
-          <p>Building foundational and advanced skills in algebraic reasoning, geometric proofs, and mathematical modeling.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">📊</span>
-          <h4>Advanced Mathematics Instructors</h4>
-          <p>Teaching trigonometry, calculus, statistics, and advanced problem-solving for students pursuing STEM pathways.</p>
-        </div>
-      </div>
-    </div>
+        <p>
+          Strong schools are guided by people who combine vision,
+          responsibility, and a deep commitment to their students
+          and community.
+        </p>
 
-    <!-- Science Department -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>🔬 Science Department</h2>
-        <p>Dedicated to scientific understanding and practical learning.</p>
       </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon">🧪</span>
-          <h4>Physics Teachers</h4>
-          <p>Exploring the laws of motion, energy, electricity, and modern physics through theory and lab experiments.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">⚗️</span>
-          <h4>Chemistry Teachers</h4>
-          <p>Guiding students through chemical reactions, laboratory techniques, and the molecular foundations of matter.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">🧬</span>
-          <h4>Biology Teachers</h4>
-          <p>Teaching life sciences from cellular biology to ecosystems, with hands-on dissection and microscopy work.</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Languages Department -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>📖 Languages Department</h2>
-        <p>Helping students master communication and expression across multiple languages.</p>
-      </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon"><span class="lang-icon">AE</span></span>
-          <h4>Arabic Language Teachers</h4>
-          <p>Developing proficiency in Arabic literature, grammar, composition, and oral expression.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon"><span class="lang-icon">EN</span></span>
-          <h4>English Language Teachers</h4>
-          <p>Building reading, writing, speaking, and listening skills for academic and global communication.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon"><span class="lang-icon">FR</span></span>
-          <h4>French Language Teachers</h4>
-          <p>Fostering French language fluency through literature, conversation, and cultural studies.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon"><span class="lang-icon">IT</span></span>
-          <h4>Italian Language Teachers</h4>
-          <p>Introducing basic Italian grammar, vocabulary, and conversational skills — building foundational language competence and cultural appreciation.</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Social Studies Department -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>🌍 Social Studies Department</h2>
-        <p>Building awareness of history, geography, and civic education.</p>
-      </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon">🗺️</span>
-          <h4>History Teachers</h4>
-          <p>Exploring world and regional history to help students understand the past and its impact on the present.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">🌎</span>
-          <h4>Geography Teachers</h4>
-          <p>Teaching physical and human geography, environmental systems, and global interconnectedness.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">🏛️</span>
-          <h4>Civics &amp; Sociology Teachers</h4>
-          <p>Instilling civic responsibility, ethical reasoning, and an understanding of social structures and institutions.</p>
-        </div>
-      </div>
-    </div>
+      <!-- LEADERSHIP FEATURE -->
 
-    <!-- Computer & Technology -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>💻 Computer &amp; Technology</h2>
-        <p>Preparing students for the digital world.</p>
-      </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon">💻</span>
-          <h4>Computer Science Teachers</h4>
-          <p>Teaching programming fundamentals, algorithms, and computational thinking for the 21st century.</p>
-        </div>
-        <div class="dept-card">
-          <span class="dept-icon">🖥️</span>
-          <h4>Digital Skills Instructors</h4>
-          <p>Building digital literacy, online research skills, and proficiency with educational and productivity software.</p>
-        </div>
-      </div>
-    </div>
+      <div class="leadership-feature">
 
-    <!-- Physical Education -->
-    <div style="margin-bottom:2.5rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>🏀 Physical Education</h2>
-        <p>Promoting health, fitness, and teamwork.</p>
-      </div>
-      <div class="dept-grid">
-        <div class="dept-card">
-          <span class="dept-icon">⚽</span>
-          <h4>Sports &amp; PE Coaches</h4>
-          <p>Encouraging physical fitness, sportsmanship, and teamwork through structured physical education and athletics.</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Our Commitment -->
-    <div class="commitment-wrapper">
-      <div class="block-head center">
-        <h2>📌 Our Commitment</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="commitment-box">
-        <p>Our teachers are committed to supporting students academically and morally, ensuring a positive and productive learning environment for all.</p>
-      </div>
-    </div>
-  </section>
+        <!-- PHOTO -->
 
-  <!-- =============================================================
-       SECTION — Qualifications
-       ============================================================= -->
-  <section class="staff-section">
-    <div class="section-head">
-      <p class="eyebrow">Credentials</p>
-      <h2>🎓 Qualifications</h2>
-      <p>We are committed to maintaining high academic standards by ensuring that all students achieve recognized qualifications that prepare them for higher education and future careers.</p>
-    </div>
+        <div class="leader-photo">
 
-    <div class="split" style="margin-bottom:2rem;">
-      <div class="panel">
-        <span class="icon-badge green">📖</span>
-        <p class="eyebrow">Humanities</p>
-        <h3>Literary Track Qualification</h3>
-        <p>Students in the Literary track receive qualifications focused on humanities and social sciences:</p>
-        <ul class="activity-list">
-          <li>📚 Languages, Literature, Philosophy, Sociology</li>
-          <li>🌍 Preparation for education, law, and humanities fields</li>
-          <li>🧠 Development of communication and analytical skills</li>
-        </ul>
-      </div>
-      <div class="panel alt">
-        <span class="icon-badge red">🔬</span>
-        <p class="eyebrow">STEM</p>
-        <h3>Scientific Track Qualification</h3>
-        <p>Students in the Scientific track earn qualifications focused on science and mathematics:</p>
-        <ul class="activity-list">
-          <li>🧪 Physics, Chemistry, Biology, Mathematics</li>
-          <li>💻 Preparation for medical, engineering, and scientific fields</li>
-          <li>🎯 Strong foundation for university STEM programs</li>
-        </ul>
-      </div>
-    </div>
+          <img
+            src="./assets/Dr.Sanaa-Sheyaeb.jpeg"
+            alt="Dr. Sanaa Shehayeb with Dr. Khaled Fayed"
+          >
 
-    <div class="split" style="margin-bottom:2rem;grid-template-columns:1fr;max-width:38rem;margin:0 auto;">
-      <div class="panel" style="text-align:center;">
-        <span class="icon-badge gold">📚</span>
-        <p class="eyebrow">Graduation</p>
-        <h3>High School Certificate</h3>
-        <p style="max-width:30rem;margin-inline:auto;">Students who successfully complete the secondary level receive an official High School Certificate, which confirms their academic achievement and readiness for university studies.</p>
-        <ul class="activity-list" style="display:inline-block;text-align:left;">
-          <li>🎓 Recognized national secondary certificate</li>
-          <li>📊 Based on continuous assessment and final examinations</li>
-          <li>🏫 Required for university admission</li>
-        </ul>
-      </div>
-    </div>
+          <!-- Small professional caption -->
 
-    <div style="margin-top:2rem;">
-      <div class="section-head" style="margin-bottom:1.5rem;">
-        <h2>🏆 Skill Development Certificates</h2>
-        <p>In addition to academic qualifications, students may receive certificates for:</p>
-      </div>
-      <div class="objectives-grid">
-        <div class="objective-card">
-          <span class="icon">💻</span>
-          <div>
-            <h4>Computer skills and digital literacy</h4>
+          <div class="leader-photo-caption">
+
+            <p>
+              <strong>Dr. Sanaa Shehayeb</strong>
+              <span>· Headmistress</span>
+              <br>
+              with <strong>Dr. Khaled Fayed</strong>
+              <span>· Director of Secondary Education</span>
+            </p>
+
           </div>
+
         </div>
-        <div class="objective-card">
-          <span class="icon">🗣️</span>
-          <div>
-            <h4>Language proficiency (Arabic, English, French, Italian)</h4>
+
+
+        <!-- TEXT -->
+
+        <div class="leader-content">
+
+          <div class="leader-kicker">
+            School Leadership
           </div>
+
+          <h3>
+            Dr. Sanaa Shehayeb
+          </h3>
+
+          <span class="leader-role">
+            Headmistress
+          </span>
+
+          <p>
+            Dr. Shehayeb leads MAOSS with a vision centered on academic
+            excellence, character development, and meaningful partnership
+            with the school community. Her leadership reflects the school's
+            commitment to creating an environment where students can grow
+            in knowledge, confidence, and purpose.
+          </p>
+
+          <div class="leader-line"></div>
+
         </div>
-        <div class="objective-card">
-          <span class="icon">🏅</span>
-          <div>
-            <h4>Participation in academic and extracurricular activities</h4>
-          </div>
-        </div>
+
       </div>
+
+
+      <!-- FOUNDING LEGACY -->
+
+      <div class="legacy-block">
+
+        <div class="legacy-year">
+          1969
+        </div>
+
+        <div class="legacy-content">
+
+          <h3>
+            Mr. Khaled Abd El Samad
+          </h3>
+
+          <span class="legacy-role">
+            Founding Principal · 1969–1975
+          </span>
+
+          <p>
+            Mr. Khaled Abd El Samad helped establish the school's early
+            foundation and identity, contributing to its development as
+            a secondary institution with a strong tradition in French
+            and English education.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="commitment-wrapper" style="margin-top:2rem;">
-      <div class="block-head center">
-        <h2>📌 Our Goal</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="commitment-box">
-        <p>Our goal is to ensure that every student graduates with strong academic knowledge, practical skills, and the confidence to succeed in higher education and life.</p>
-      </div>
-    </div>
   </section>
 
-  <!-- =============================================================
+
+  <!-- =========================================================
+       ADMINISTRATIVE TEAM
+       ========================================================= -->
+
+  <section class="staff-section">
+
+    <div class="staff-section-inner">
+
+      <div class="section-head">
+
+        <p class="section-eyebrow">
+          Administration
+        </p>
+
+        <h2>
+          Supporting Leadership
+        </h2>
+
+        <p>
+          Behind the school's daily work is a team responsible for
+          academic coordination, student affairs, and the smooth
+          operation of school life.
+        </p>
+
+      </div>
+
+
+      <div class="role-grid">
+
+
+        <!-- Academic Administration -->
+
+        <div class="role-card">
+
+          <div class="icon-frame">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <path d="M4 5h16v14H4z"></path>
+              <path d="M8 9h8"></path>
+              <path d="M8 13h5"></path>
+              <path d="M8 17h8"></path>
+            </svg>
+
+          </div>
+
+          <div>
+
+            <h3>
+              Academic Administration
+            </h3>
+
+            <p>
+              Curriculum coordination, examination organization,
+              academic planning, and support for teaching and learning.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Student Affairs -->
+
+        <div class="role-card">
+
+          <div class="icon-frame">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="3"></circle>
+              <path d="M6 20c.7-3.4 2.7-5 6-5s5.3 1.6 6 5"></path>
+              <path d="M4 11h3"></path>
+              <path d="M17 11h3"></path>
+            </svg>
+
+          </div>
+
+          <div>
+
+            <h3>
+              Student Affairs
+            </h3>
+
+            <p>
+              Supporting students through guidance, discipline,
+              extracurricular coordination, and school-life initiatives.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       MESSAGE FROM HEADMISTRESS
+       ========================================================= -->
+
+  <section class="staff-section dark-section">
+
+    <div class="staff-section-inner">
+
+      <div class="section-head">
+
+        <p class="section-eyebrow">
+          A Message
+        </p>
+
+        <h2>
+          From Our Headmistress
+        </h2>
+
+      </div>
+
+
+      <div class="headmistress-message">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <blockquote>
+          Our staff is the heart of Maroun Abboud Public High School.
+          Every day, our teachers and administrators work together to
+          create an environment where students can grow academically,
+          socially, and personally. I am proud to lead such a committed
+          team, and confident that together we can continue to raise a
+          generation grounded in knowledge, character, and purpose.
+        </blockquote>
+
+        <div class="message-signoff">
+          Dr. Sanaa Shehayeb · Headmistress
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       ACADEMIC DEPARTMENTS
+       ========================================================= -->
+
+  <section class="staff-section">
+
+    <div class="staff-section-inner">
+
+      <div class="section-head">
+
+        <p class="section-eyebrow">
+          Academic Departments
+        </p>
+
+        <h2>
+          Expertise Across Every Field
+        </h2>
+
+        <p>
+          Our academic team brings together educators across the
+          disciplines that shape a complete secondary education.
+        </p>
+
+      </div>
+
+
+      <div class="department-list">
+
+
+        <!-- Science -->
+
+        <div class="department-item">
+
+          <div class="department-number">
+            01
+          </div>
+
+          <div class="department-icon">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <path d="M9 3h6"></path>
+              <path d="M10 3v6l-5 8.5A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.7-3.5L14 9V3"></path>
+              <path d="M8 15h8"></path>
+            </svg>
+
+          </div>
+
+          <div class="department-content">
+
+            <h3>
+              Science
+            </h3>
+
+            <p>
+              Physics · Chemistry · Biology
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Mathematics -->
+
+        <div class="department-item">
+
+          <div class="department-number">
+            02
+          </div>
+
+          <div class="department-icon">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <path d="M4 19L19 4"></path>
+              <path d="M6 5h5"></path>
+              <path d="M8.5 2.5v5"></path>
+              <path d="M15 14l5 5"></path>
+              <path d="M20 14l-5 5"></path>
+            </svg>
+
+          </div>
+
+          <div class="department-content">
+
+            <h3>
+              Mathematics
+            </h3>
+
+            <p>
+              Algebra · Geometry · Trigonometry · Calculus
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Languages -->
+
+        <div class="department-item">
+
+          <div class="department-number">
+            03
+          </div>
+
+          <div class="department-icon">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <path d="M4 5h16v12H4z"></path>
+              <path d="M8 21h8"></path>
+              <path d="M9 9h6"></path>
+              <path d="M12 7v6"></path>
+              <path d="M9.5 11h5"></path>
+            </svg>
+
+          </div>
+
+          <div class="department-content">
+
+            <h3>
+              Languages
+            </h3>
+
+            <p>
+              Arabic · English · French · Italian
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Humanities -->
+
+        <div class="department-item">
+
+          <div class="department-number">
+            04
+          </div>
+
+          <div class="department-icon">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <path d="M4 20h16"></path>
+              <path d="M6 20V9l6-4 6 4v11"></path>
+              <path d="M9 20v-5h6v5"></path>
+              <path d="M4 9h16"></path>
+            </svg>
+
+          </div>
+
+          <div class="department-content">
+
+            <h3>
+              Humanities &amp; Social Studies
+            </h3>
+
+            <p>
+              History · Geography · Sociology · Philosophy
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Technology -->
+
+        <div class="department-item">
+
+          <div class="department-number">
+            05
+          </div>
+
+          <div class="department-icon">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="13" rx="1"></rect>
+              <path d="M8 21h8"></path>
+              <path d="M12 17v4"></path>
+              <path d="M8 9l2 2-2 2"></path>
+              <path d="M12 13h4"></path>
+            </svg>
+
+          </div>
+
+          <div class="department-content">
+
+            <h3>
+              Technology &amp; Computer Science
+            </h3>
+
+            <p>
+              Computer Science · Coding · Digital Skills
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Arts and PE -->
+
+        <div class="department-item">
+
+          <div class="department-number">
+            06
+          </div>
+
+          <div class="department-icon">
+
+            <svg class="staff-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="8"></circle>
+              <path d="M9 8.5c1.5-1 4.5-1 6 0"></path>
+              <path d="M8.5 15c1.2 1 5.8 1 7 0"></path>
+              <circle cx="9" cy="11" r=".8"></circle>
+              <circle cx="15" cy="11" r=".8"></circle>
+            </svg>
+
+          </div>
+
+          <div class="department-content">
+
+            <h3>
+              Arts &amp; Physical Education
+            </h3>
+
+            <p>
+              Art · Music · Physical Education · Sports
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PROFESSIONAL DEVELOPMENT
+       ========================================================= -->
+
+  <section class="staff-section dark-section">
+
+    <div class="staff-section-inner">
+
+      <div class="section-head">
+
+        <p class="section-eyebrow">
+          Professional Growth
+        </p>
+
+        <h2>
+          Developing Our Educators
+        </h2>
+
+        <p>
+          A strong educational environment depends on educators who
+          continue to learn, collaborate, reflect, and improve.
+        </p>
+
+      </div>
+
+
+      <div class="development-list">
+
+
+        <div class="development-item">
+
+          <div class="development-number">
+            01
+          </div>
+
+          <div>
+
+            <h3>
+              Ongoing Training &amp; Workshops
+            </h3>
+
+            <p>
+              Professional development focused on teaching methodologies,
+              classroom practice, educational technology, and emerging
+              approaches to learning.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="development-item">
+
+          <div class="development-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>
+              Collaborative Planning
+            </h3>
+
+            <p>
+              Teachers work together across departments to exchange ideas,
+              coordinate learning experiences, and strengthen teaching
+              practices.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="development-item">
+
+          <div class="development-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>
+              Professional Evaluation
+            </h3>
+
+            <p>
+              Constructive feedback and reflection help educators identify
+              strengths and opportunities for continued professional growth.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="development-item">
+
+          <div class="development-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>
+              Recognition &amp; Excellence
+            </h3>
+
+            <p>
+              The school values and recognizes the dedication, creativity,
+              innovation, and commitment of its educators.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       OUR COMMITMENT
+       ========================================================= -->
+
+  <section class="staff-section">
+
+    <div class="staff-section-inner">
+
+      <div class="commitment">
+
+        <div class="commitment-icon">
+
+          <svg class="staff-icon" viewBox="0 0 24 24">
+            <path d="M12 3l2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9L12 3z"></path>
+          </svg>
+
+        </div>
+
+        <p class="section-eyebrow">
+          Our Commitment
+        </p>
+
+        <h2>
+          Education is built on people.
+        </h2>
+
+        <p>
+          Our teachers and school professionals are committed to supporting
+          students academically and personally while creating a positive,
+          respectful, and productive environment in which every student
+          can move forward with confidence.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
        CLOSING
-       ============================================================= -->
-  <section class="closing">
+       ========================================================= -->
+
+  <section class="staff-closing">
+
     <div class="closing-inner">
-      <blockquote>Behind every successful student is a dedicated teacher. At MAOSS, our staff is not just a team — we are a family united by a shared purpose: to inspire, educate, and empower the next generation.</blockquote>
-      <p class="signoff">MAOSS Staff Community<span>Maroun Abboud Public High School, Aley</span></p>
+
+      <div class="closing-eyebrow">
+        The MAOSS Community
+      </div>
+
+      <blockquote>
+        Behind every successful student is a dedicated teacher.
+        At MAOSS, our staff is united by a shared purpose:
+        to inspire, educate, and empower the next generation.
+      </blockquote>
+
+      <p class="signoff">
+        MAOSS Staff Community
+
+        <span>
+          Maroun Abboud Public High School, Aley
+        </span>
+      </p>
+
     </div>
+
   </section>
 
-  <!-- ==================== Footer ==================== -->
+</main>
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
   <footer class="site-footer">
+
     <div class="footer-inner">
+
       <div class="footer-brand">
+
         <a class="brand" href="index.html">
-          <img src="./assets/MAOSS-logo.png" alt="MAOSS Aley crest">
+
+          <img
+            src="./assets/MAOSS-logo-circle.png"
+            alt="MAOSS Aley crest">
+
           MAOSS <em>·</em> Aley
+
         </a>
-        <p>Maroun Abboud Public High School — committed to academic excellence and to raising a generation grounded in knowledge, character, and purpose.</p>
+
+        <p>
+          Maroun Abboud Public High School committed to academic
+          excellence and to raising a generation grounded in knowledge,
+          character, and purpose.
+        </p>
+
       </div>
+
+
       <div class="footer-col">
-        <h4>Quick Links</h4>
+
+        <h4>
+          Quick Links
+        </h4>
+
         <nav>
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
@@ -850,35 +1970,87 @@
           <a href="students.html">Students</a>
           <a href="contact.html">Contact</a>
         </nav>
+
       </div>
+
+
       <div class="footer-col">
-        <h4>More</h4>
+
+        <h4>
+          More
+        </h4>
+
         <nav>
           <a href="news.html">News &amp; Events</a>
           <a href="parent.html">Parents</a>
           <a href="staff.html">Staff</a>
           <a href="services.html">Services</a>
         </nav>
+
       </div>
+
+
       <div class="footer-social">
-        <h4>Follow Us</h4>
+
+        <h4>
+          Follow Us
+        </h4>
+
         <div class="social-links">
-          <a href="https://www.facebook.com/share/18xgTDXxEK/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+
+          <a
+            href="https://www.facebook.com/share/18xgTDXxEK/"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook">
+
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+            </svg>
+
           </a>
-          <a href="https://www.instagram.com/marounabboudss?igsh=MWlyanhwbDgzNGJ4Ng==" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+
+
+          <a
+            href="https://www.instagram.com/marounabboudss/"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram">
+
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.28-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.333.014 8.741 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+
+            </svg>
+
           </a>
+
         </div>
+
       </div>
+
     </div>
+
+
     <div class="footer-bottom">
-      &copy; 2026 Maroun Abboud Public High School (MAOSS) — Aley, Lebanon. All rights reserved.
+
+      &copy; 2026 Maroun Abboud Public High School (MAOSS) —
+      Aley, Lebanon. All rights reserved.
+
     </div>
+
   </footer>
+
 
   <script src="script.js"></script>
 
 </body>
 </html>
-
