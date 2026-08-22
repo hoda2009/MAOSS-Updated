@@ -6245,7 +6245,7 @@ font-family:'Montserrat', sans-serif;
 .steam-process {
   width: 100%;
   background: #ffffff;
-  padding: 115px 0 125px;
+  padding: 115px 0 115px;
   font-family: Montserrat, sans-serif;
   color: #0d2949;
   overflow: hidden;
@@ -9958,4 +9958,81 @@ font-family:'Montserrat', sans-serif;
     aspect-ratio: 16 / 10;
   }
 
+}
+
+/* ---------- STEAM PROCESS GALLERY BUTTON ---------- */
+
+.steam-process-action{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:42px;
+}
+
+.steam-gallery-link{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  min-height:52px;
+  padding:0 24px;
+
+  background:#8d2e42;
+  color:#ffffff;
+  border:1px solid #0d2949;
+  border-radius:999px;
+
+  font-family:'Montserrat', sans-serif;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.2px;
+  text-decoration:none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* ARROW */
+
+.steam-gallery-link span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  width:25px;
+  height:25px;
+
+  background:#f2a93e;
+  color:#0d2949;
+
+  border-radius:50%;
+
+  font-size:15px;
+  line-height:1;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* HOVER */
+
+.steam-gallery-link:hover{
+  background:#f2a93e;
+  color:#0d2949;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(13,41,73,0.18);
+}
+
+.steam-gallery-link:hover span{
+  background:#0d2949;
+  color:#f2a93e;
+  transform:translateX(4px);
 }
