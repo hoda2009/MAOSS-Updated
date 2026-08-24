@@ -5100,7 +5100,7 @@ font-family:'Montserrat', sans-serif;
   position: relative;
   width: 100%;
   padding: 115px 0 125px;
-  background: #f6f3ed;
+  /*background: #f6f3ed;*/
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
 }
@@ -5259,7 +5259,7 @@ font-family:'Montserrat', sans-serif;
 
   font-size: clamp(52px, 5.2vw, 82px);
 
-  font-weight: 600;
+  font-weight: 500;
 
   line-height: 0.98;
 
@@ -6244,7 +6244,6 @@ font-family:'Montserrat', sans-serif;
 
 .steam-process {
   width: 100%;
-  background: #ffffff;
   padding: 115px 0 115px;
   font-family: Montserrat, sans-serif;
   color: #0d2949;
@@ -6499,7 +6498,7 @@ font-family:'Montserrat', sans-serif;
 .steam-explore {
   width: 100%;
   background: #0d2949;
-  padding: 120px 0 130px;
+  padding: 120px 0 120px;
   font-family: Montserrat, sans-serif;
   color: #ffffff;
   overflow: hidden;
@@ -6891,7 +6890,7 @@ font-family:'Montserrat', sans-serif;
 .steam-action {
   width: 100%;
   background: #ffffff;
-  padding: 120px 0 125px;
+  padding: 120px 0 120px;
   font-family: Montserrat, sans-serif;
   color: #0d2949;
   overflow: hidden;
@@ -8754,7 +8753,6 @@ font-family:'Montserrat', sans-serif;
 
 .latest-news {
   width: 100%;
-  /*background: #f7f8fa; its amazing color as bg for thi sec keep it as an option HODAAA*/
   padding: 110px 0 120px;
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
@@ -8778,8 +8776,8 @@ font-family:'Montserrat', sans-serif;
 
 .latest-news-head .eyebrow {
   margin: 0 0 14px;
-  color:#8d2e42;
-  font-size:13px;
+  color: #8d2e42;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -8788,11 +8786,10 @@ font-family:'Montserrat', sans-serif;
 .latest-news-head h2 {
   margin: 0;
   color: #0d2949;
-  font-family:'Montserrat', sans-serif;
-    font-size:clamp(2.2rem, 4vw, 3.25rem);
-    font-weight:500;
-    line-height:1.1;
-    letter-spacing:-0.02em;
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .latest-news-head .section-divider {
@@ -8823,25 +8820,42 @@ font-family:'Montserrat', sans-serif;
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(400px, 0.88fr);
   gap: 55px;
+
   align-items: stretch;
 }
 
 
 /* =========================================================
-   FEATURED STORY
+   LEFT FEATURE COLUMN
+========================================================= */
+
+.news-feature-column {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+
+  min-height: 100%;
+}
+
+
+/* =========================================================
+   BOTH NAVY FEATURE CARDS
 ========================================================= */
 
 .news-featured {
-  min-height: 590px;
+  position: relative;
 
-  display: grid;
-  grid-template-rows: 275px 1fr;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
 
   background: #0d2949;
   border-radius: 4px;
   overflow: hidden;
 
-  box-shadow: 0 24px 55px rgba(13, 41, 73, 0.13);
+  box-shadow:
+    0 24px 55px rgba(13, 41, 73, 0.13);
 
   transition:
     transform 0.4s ease,
@@ -8850,17 +8864,29 @@ font-family:'Montserrat', sans-serif;
 
 .news-featured:hover {
   transform: translateY(-5px);
-  box-shadow: 0 30px 65px rgba(13, 41, 73, 0.18);
+
+  box-shadow:
+    0 30px 65px rgba(13, 41, 73, 0.18);
 }
 
 
 /* =========================================================
-   FEATURED VISUAL
+   STUDENT FEATURE — VISUAL TOP
+========================================================= */
+
+.news-student {
+  display: grid;
+  grid-template-rows: 145px 1fr;
+}
+
+
+/* =========================================================
+   STUDENT FEATURE VISUAL
 ========================================================= */
 
 .news-featured-image {
   position: relative;
-  min-height: 275px;
+  min-height: 145px;
   overflow: hidden;
 
   background:
@@ -8884,7 +8910,7 @@ font-family:'Montserrat', sans-serif;
   height: 220px;
 
   right: -70px;
-  top: -80px;
+  top: -110px;
 
   border: 1px solid rgba(196, 154, 58, 0.32);
   border-radius: 50%;
@@ -8895,7 +8921,7 @@ font-family:'Montserrat', sans-serif;
   height: 1px;
 
   left: -40px;
-  bottom: 55px;
+  bottom: 35px;
 
   background: linear-gradient(
     90deg,
@@ -8909,7 +8935,7 @@ font-family:'Montserrat', sans-serif;
 
 
 /* =========================================================
-   FEATURED PLACEHOLDER
+   STUDENT FEATURE PLACEHOLDER
 ========================================================= */
 
 .news-featured-placeholder {
@@ -8920,7 +8946,7 @@ font-family:'Montserrat', sans-serif;
   align-items: center;
   justify-content: center;
 
-  padding: 30px;
+  padding: 25px;
 }
 
 .news-featured-placeholder span {
@@ -8936,20 +8962,20 @@ font-family:'Montserrat', sans-serif;
 
   border: 1px solid rgba(196, 154, 58, 0.45);
 
-  padding: 14px 20px;
+  padding: 12px 18px;
 }
 
 
 /* =========================================================
-   FEATURED NUMBER
+   FEATURE NUMBERS
 ========================================================= */
 
 .news-number {
   position: absolute;
   z-index: 3;
 
-  top: 25px;
-  left: 28px;
+  top: 22px;
+  left: 26px;
 
   color: #ffffff;
 
@@ -8962,11 +8988,11 @@ font-family:'Montserrat', sans-serif;
 
 
 /* =========================================================
-   FEATURED CONTENT
+   FEATURE CONTENT
 ========================================================= */
 
 .news-featured-content {
-  padding: 42px 45px 45px;
+  padding: 27px 38px 30px;
 
   display: flex;
   flex-direction: column;
@@ -8976,7 +9002,7 @@ font-family:'Montserrat', sans-serif;
 .news-category {
   display: inline-block;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   color: #b58a32;
 
@@ -8989,11 +9015,11 @@ font-family:'Montserrat', sans-serif;
 .news-featured-content h3 {
   max-width: 650px;
 
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 
   color: #ffffff;
 
-  font-size: clamp(1.7rem, 2.6vw, 2.55rem);
+  font-size: clamp(1.55rem, 2.35vw, 2.25rem);
   line-height: 1.15;
   font-weight: 650;
   letter-spacing: -0.025em;
@@ -9006,8 +9032,8 @@ font-family:'Montserrat', sans-serif;
 
   color: rgba(255, 255, 255, 0.72);
 
-  font-size: 0.98rem;
-  line-height:3;
+  font-size: 0.9rem;
+  line-height: 1.9;
 }
 
 .news-featured-content strong {
@@ -9018,17 +9044,211 @@ font-family:'Montserrat', sans-serif;
 .news-meta {
   display: inline-block;
 
-  margin-top: 27px;
-  padding-top: 17px;
+  margin-top: 18px;
+  padding-top: 13px;
 
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 
   color: rgba(255, 255, 255, 0.55);
 
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PRESENTATION CARD
+========================================================= */
+
+.news-presentation {
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d2949 0%,
+      #102f51 55%,
+      #081d35 100%
+    );
+}
+
+.news-presentation::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -120px;
+  bottom: -150px;
+
+  border: 1px solid rgba(242, 169, 62, 0.22);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.news-presentation::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -75px;
+  bottom: -105px;
+
+  border: 1px solid rgba(242, 169, 62, 0.10);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PRESENTATION CONTENT
+========================================================= */
+
+.news-presentation-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  padding: 32px 38px 34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-presentation-top {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-bottom: 20px;
+}
+
+.news-presentation-top .news-number {
+  position: static;
+  opacity: 0.75;
+}
+
+.news-presentation-top .news-category {
+  margin: 0;
+}
+
+.news-presentation h3 {
+  max-width: 650px;
+
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: clamp(1.45rem, 2.25vw, 2.15rem);
+  line-height: 1.15;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.news-presentation p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.news-presentation p strong {
+  color: #ffffff;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   PRESENTATION BUTTON
+========================================================= */
+
+.news-presentation-btn {
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  min-height: 45px;
+  padding: 0 20px;
+
+  background: #8d2e42;
+  color: #ffffff;
+
+  border: 1px solid #8d2e42;
+  border-radius: 999px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.news-presentation-btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  background: #f2a93e;
+  color: #0d2949;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.news-presentation-btn:hover {
+  background: #f2a93e;
+  color: #0d2949;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(20, 47, 89, 0.18);
+}
+
+.news-presentation-btn:hover span {
+  background: #0d2949;
+  color: #ffffff;
+
+  transform: translateX(3px);
 }
 
 
@@ -9134,7 +9354,7 @@ font-family:'Montserrat', sans-serif;
 
 
 /* =========================================================
-   RESPONSIVE — LARGE TABLETS
+   LARGE TABLETS
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -9149,6 +9369,10 @@ font-family:'Montserrat', sans-serif;
     gap: 50px;
   }
 
+  .news-feature-column {
+    grid-template-rows: auto auto;
+  }
+
   .news-featured {
     min-height: 0;
   }
@@ -9157,7 +9381,7 @@ font-family:'Montserrat', sans-serif;
 
 
 /* =========================================================
-   RESPONSIVE — TABLETS
+   TABLETS
 ========================================================= */
 
 @media (max-width: 800px) {
@@ -9175,15 +9399,23 @@ font-family:'Montserrat', sans-serif;
     margin-bottom: 45px;
   }
 
-  .news-featured {
-    grid-template-rows: 230px auto;
+  .news-feature-column {
+    gap: 20px;
+  }
+
+  .news-student {
+    grid-template-rows: 210px auto;
   }
 
   .news-featured-image {
-    min-height: 230px;
+    min-height: 210px;
   }
 
   .news-featured-content {
+    padding: 34px 30px 35px;
+  }
+
+  .news-presentation-content {
     padding: 34px 30px 35px;
   }
 
@@ -9195,7 +9427,7 @@ font-family:'Montserrat', sans-serif;
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   MOBILE
 ========================================================= */
 
 @media (max-width: 560px) {
@@ -9217,26 +9449,44 @@ font-family:'Montserrat', sans-serif;
     font-size: 0.9rem;
   }
 
-  .news-featured {
-    grid-template-rows: 200px auto;
-    border-radius: 3px;
+  .news-feature-column {
+    gap: 16px;
+  }
+
+  .news-student {
+    grid-template-rows: 180px auto;
   }
 
   .news-featured-image {
-    min-height: 200px;
+    min-height: 180px;
   }
 
   .news-featured-content {
     padding: 30px 24px 32px;
   }
 
-  .news-featured-content h3 {
-    font-size: 1.65rem;
+  .news-featured-content h3,
+  .news-presentation h3 {
+    font-size: 1.6rem;
   }
 
-  .news-featured-content p {
+  .news-featured-content p,
+  .news-presentation p {
     font-size: 0.86rem;
     line-height: 1.75;
+  }
+
+  .news-presentation-content {
+    padding: 30px 24px 32px;
+  }
+
+  .news-presentation-top {
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .news-presentation-btn {
+    width: 100%;
   }
 
   .news-story {
@@ -10037,3 +10287,516 @@ font-family:'Montserrat', sans-serif;
   transform:translateX(4px);
 }
 
+/* =========================================================
+   AUB × MAOSS — PARTNERSHIP SECTION
+   ========================================================= */
+
+.aub-maoss {
+  position: relative;
+  width: 100%;
+  padding: 120px 0 120px;
+
+  background: #f6f3ed;
+
+  overflow: hidden;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.aub-maoss * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =========================================================
+   SUBTLE BACKGROUND DETAIL
+   ========================================================= */
+
+.aub-maoss::before {
+  content: "";
+
+  position: absolute;
+  top: -220px;
+  left: -220px;
+
+  width: 560px;
+  height: 560px;
+
+  border: 1px solid rgba(13, 41, 73, 0.07);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.aub-maoss::after {
+  content: "";
+
+  position: absolute;
+  right: -180px;
+  bottom: -260px;
+
+  width: 560px;
+  height: 560px;
+
+  border: 1px solid rgba(242, 169, 62, 0.15);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INNER CONTAINER
+   ========================================================= */
+
+.aub-maoss-inner {
+  position: relative;
+  z-index: 2;
+
+  width: calc(100% - 308px);
+  max-width: 1530px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION NUMBER / LABEL
+   ========================================================= */
+
+.aub-maoss-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 55px;
+}
+
+.aub-maoss-label span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #0d2949;
+  color: #f2a93e;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.aub-maoss-label p {
+  margin: 0;
+
+  color: #0d2949;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.aub-maoss-grid {
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT HEADING
+   ========================================================= */
+
+.aub-maoss-heading {
+  position: relative;
+}
+
+.aub-maoss-heading::before {
+  content: "";
+
+  position: absolute;
+
+  left: -28px;
+  top: 5px;
+
+  width: 4px;
+  height: 145px;
+
+  background: #f2a93e;
+
+  border-radius: 4px;
+}
+
+.aub-maoss-heading .eyebrow {
+  margin: 0 0 22px;
+
+  color: #8d2e42;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2.8px;
+
+  text-transform: uppercase;
+}
+
+.aub-maoss-heading h2 {
+  margin: 0;
+
+  color: #0d2949;
+
+  font-size: clamp(48px, 5.2vw, 78px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -3.5px;
+}
+
+.aub-maoss-heading h2 span {
+  color: #f2a93e;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.aub-maoss-content {
+  max-width: 650px;
+
+  padding-top: 8px;
+}
+
+.aub-maoss-content > p {
+  margin: 0 0 22px;
+
+  color: #58718f;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+.aub-maoss-content .aub-maoss-lead {
+  margin-bottom: 24px;
+
+  color: #172333;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   PARTNERSHIP DETAILS
+   ========================================================= */
+
+.aub-maoss-details {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  margin-top: 45px;
+
+  border-top: 1px solid #d8dfe6;
+  border-bottom: 1px solid #d8dfe6;
+}
+
+.aub-maoss-detail {
+  display: grid;
+
+  grid-template-columns: 42px 1fr;
+
+  gap: 20px;
+
+  padding: 22px 0;
+
+  align-items: start;
+}
+
+.aub-maoss-detail + .aub-maoss-detail {
+  border-top: 1px solid #d8dfe6;
+}
+
+.aub-maoss-detail > span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(242, 169, 62, 0.65);
+
+  border-radius: 50%;
+
+  color: #0d2949;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.aub-maoss-detail strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #0d2949;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.aub-maoss-detail p {
+  margin: 0;
+
+  color: #71839a;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   DETAIL HOVER
+   ========================================================= */
+
+.aub-maoss-detail:hover > span {
+  background: #f2a93e;
+
+  color: #0d2949;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ARTICLE LINK — AUB STORY BUTTON
+   ========================================================= */
+
+.aub-maoss-link {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 1.2rem;
+
+  min-height: 52px;
+
+  padding: 0 24px;
+
+  background: #8d2e42;
+
+  color: #FFFFFF;
+
+  border: 1px solid #0d2949;
+
+  border-radius: 999px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  text-decoration: none;
+
+  text-transform: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+.aub-maoss-link span {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  background: #f2a93e;
+
+  color: #0d2949;
+
+  border-radius: 50%;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+}
+
+
+/* HOVER */
+
+.aub-maoss-link:hover {
+
+  background: #f2a93e;
+
+  color: #0d2949;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(20, 47, 89, 0.12);
+
+}
+
+
+.aub-maoss-link:hover span {
+
+  background: #0d2949;
+
+  color: #FFFFFF;
+
+  transform: translateX(3px);
+
+}
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .aub-maoss-inner {
+    width: calc(100% - 80px);
+  }
+
+  .aub-maoss-grid {
+    gap: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .aub-maoss {
+    padding: 90px 0 100px;
+  }
+
+  .aub-maoss-inner {
+    width: calc(100% - 44px);
+  }
+
+  .aub-maoss-label {
+    margin-bottom: 40px;
+  }
+
+  .aub-maoss-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .aub-maoss-heading::before {
+    left: -16px;
+
+    height: 115px;
+  }
+
+  .aub-maoss-heading h2 {
+    font-size: clamp(44px, 13vw, 64px);
+
+    letter-spacing: -2.5px;
+  }
+
+  .aub-maoss-content .aub-maoss-lead {
+    font-size: 20px;
+  }
+
+  .aub-maoss-content > p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .aub-maoss {
+    padding: 75px 0 85px;
+  }
+
+  .aub-maoss-inner {
+    width: calc(100% - 36px);
+  }
+
+  .aub-maoss-heading h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .aub-maoss-detail {
+    grid-template-columns: 36px 1fr;
+
+    gap: 14px;
+  }
+
+}
