@@ -4203,3 +4203,559 @@ background: radial-gradient(circle at center, #163265 0%, #0A1F44 80%, #163265 1
 
 }
 
+/* =========================================================
+   AUB FEATURED STORY
+   MAOSS Institutional / Editorial Highlight
+   ========================================================= */
+
+.aub-feature {
+  position: relative;
+  overflow: hidden;
+
+  background: #f5f0e7;
+
+  padding: 7rem 5%;
+}
+
+
+/* =========================================================
+   BACKGROUND DETAILS
+   ========================================================= */
+
+.aub-feature::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -220px;
+  top: -180px;
+
+  border: 1px solid rgba(20, 47, 89, 0.07);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.aub-feature::after {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  left: -170px;
+  bottom: -150px;
+
+  border: 1px solid rgba(208, 164, 58, 0.13);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.aub-feature-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 5.5rem;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.aub-feature-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding: 1rem 0;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.aub-feature-eyebrow {
+ /* margin: 0 0 1.3rem;
+
+  color: #8C1520;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;*/
+  margin: 0px 0px 18px;
+    color: rgb(140, 21, 32);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.aub-feature-content h2 {
+  margin: 0;
+
+  color: #142F59;
+
+  font-family: 'Montserrat', sans-serif;
+
+ /* font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  font-weight: 600;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;*/
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   GOLD RULE
+   ========================================================= */
+
+.aub-feature-rule {
+  position: relative;
+
+  width: 70px;
+
+  height: 2px;
+
+  margin: 2rem 0 1.7rem;
+
+  background: #D0A43A;
+}
+
+
+.aub-feature-rule::after {
+  content: "";
+
+  position: absolute;
+
+  right: -9px;
+
+  top: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  background: rgb(140, 21, 32);
+
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.aub-feature-description {
+  max-width: 650px;
+
+  margin: 0 0 1.15rem;
+
+  color: #4B4A44;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.96rem;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTON
+   Matches MAOSS Home Page
+   ========================================================= */
+
+.aub-feature-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 1.2rem;
+
+  min-height: 52px;
+
+  padding: 0 24px;
+
+  background: #8d2e42;
+
+  color: #FFFFFF;
+
+  border: 1px solid #0d2949;
+
+  border-radius: 999px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.aub-feature-btn span {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  background: #f2a93e;
+
+  color: #0d2949;
+
+  border-radius: 50%;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.aub-feature-btn:hover {
+  background: #f2a93e;
+
+  color: #0d2949;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(20, 47, 89, 0.12);
+}
+
+
+.aub-feature-btn:hover span {
+  background: #0d2949;
+
+  color: #FFFFFF;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+   ========================================================= */
+
+.aub-feature-panel {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 440px;
+
+  padding: 3.2rem;
+
+  background: #142F59;
+
+  box-shadow:
+    0 18px 45px rgba(20, 47, 89, 0.10);
+}
+
+
+/* subtle gold edge */
+
+.aub-feature-panel::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background: #D0A43A;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.aub-feature-quote {
+  position: relative;
+
+  padding: 1rem 0 2.5rem;
+}
+
+
+.aub-quote-mark {
+  position: absolute;
+
+  left: -0.2rem;
+  top: -1.5rem;
+
+  color: #D0A43A;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 5rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  opacity: 0.9;
+}
+
+
+.aub-feature-quote p {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  padding-left: 1.2rem;
+
+  color: #FFFFFF;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 1.05rem;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   QUOTE SOURCE
+   ========================================================= */
+
+.aub-feature-source {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-top: 1.8rem;
+
+  padding-left: 1.2rem;
+}
+
+
+.aub-feature-source span {
+  color: #D0A43A;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+}
+
+
+.aub-feature-source small {
+  margin-top: 0.35rem;
+
+  color: rgba(255,255,255,0.55);
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.65rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PUBLISHER
+   ========================================================= */
+
+.aub-feature-publisher {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+
+.aub-feature-publisher span {
+  color: rgba(255,255,255,0.45);
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.6rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.aub-feature-publisher strong {
+  margin-top: 0.25rem;
+
+  color: #FFFFFF;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+}
+
+
+.aub-feature-publisher small {
+  margin-top: 0.2rem;
+
+  color: rgba(255,255,255,0.5);
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.62rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .aub-feature {
+    padding: 5.5rem 6%;
+  }
+
+  .aub-feature-inner {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .aub-feature-panel {
+    min-height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .aub-feature {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .aub-feature-inner {
+    gap: 2.5rem;
+  }
+
+  .aub-feature-content h2 {
+    font-size: 2.7rem;
+  }
+
+  .aub-feature-description {
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+  }
+
+  .aub-feature-btn {
+    width: 100%;
+
+    padding: 0 20px;
+  }
+
+  .aub-feature-panel {
+    padding: 2.2rem 1.7rem;
+  }
+
+  .aub-feature-quote p {
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+  }
+
+}
