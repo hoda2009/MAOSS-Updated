@@ -273,3 +273,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach((el) => revealObserver.observe(el));
 });
+
+
+
+/*=======================================Staff=======================*/
+/* =========================================================
+   TEACHER LANGUAGE TOGGLE
+   ========================================================= */
+
+document.querySelectorAll(".teacher-language-toggle").forEach(button => {
+
+  button.addEventListener("click", function () {
+
+    const card = this.closest(".teacher-card");
+    const description = card.querySelector(".teacher-description");
+
+    if (this.textContent.trim() === "العربية") {
+
+      // Save English text
+      description.dataset.english = description.textContent.trim();
+
+      // Replace with Arabic
+      description.textContent = description.dataset.arabic;
+
+      // Arabic direction
+      description.setAttribute("dir", "rtl");
+
+      // Change button
+      this.textContent = "English";
+
+    } else {
+
+      // Replace with English
+      description.textContent = description.dataset.english;
+
+      // Back to normal direction
+      description.removeAttribute("dir");
+
+      // Change button
+      this.textContent = "العربية";
+
+    }
+
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const educatorsSection = document.querySelector(".educators-section");
+
+  if (!educatorsSection) return;
+
+  const teacherCards =
+    educatorsSection.querySelectorAll(".teacher-card");
+
+  const observer = new IntersectionObserver(
+    function (entries, observer) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          teacherCards.forEach(function (card) {
+            card.classList.add("animate-in");
+          });
+
+          // IMPORTANT:
+          // Stop watching after the first appearance.
+          // The animation will NOT replay.
+          observer.unobserve(entry.target);
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  observer.observe(educatorsSection);
+
+});

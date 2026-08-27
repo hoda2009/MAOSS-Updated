@@ -930,9 +930,7 @@
         padding:0 24px;
       }
 
-      .staff-hero h1{
-        font-size:clamp(2.2rem,9vw,3.25rem);
-      }
+    
 
       .overview-grid{
         grid-template-columns:1fr 1fr;
@@ -1052,6 +1050,253 @@
 
     }
 
+
+
+
+    /* =========================================================
+   OUR EDUCATORS
+   ========================================================= */
+
+.educators-section{
+  background:#ffffff;
+}
+
+.educators-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+}
+
+
+/* =========================================================
+   TEACHER CARD
+   ========================================================= */
+
+.teacher-card{
+  background:#ffffff;
+  border:1px solid var(--line);
+  overflow:hidden;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+    border-radius:15px;
+}
+
+.teacher-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(216,181,106,.7);
+  box-shadow:0 16px 35px rgba(13,41,73,.09);
+
+}
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
+
+.teacher-photo{
+  width:100%;
+  aspect-ratio:4 / 3;
+  overflow:hidden;
+  background:var(--navy-dark);
+}
+
+.teacher-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+
+  object-fit:cover;
+  object-position:center;
+
+  transition:transform .5s ease;
+}
+
+.teacher-card:hover .teacher-photo img{
+  transform:scale(1.04);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.teacher-content{
+  padding:24px 24px 22px;
+}
+
+
+/* =========================================================
+   SUBJECT
+   ========================================================= */
+
+.teacher-subject{
+  margin:0 0 7px;
+
+  color:var(--burgundy);
+
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.teacher-name{
+  margin:0;
+
+  color:var(--navy);
+
+  font-size:1.25rem;
+  font-weight:600;
+  line-height:1.25;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.teacher-description{
+  margin:15px 0 0;
+
+  color:var(--muted);
+
+  font-size:.78rem;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   LANGUAGE BUTTON
+   ========================================================= */
+
+.teacher-language-toggle{
+  display:inline-block;
+
+  margin-top:15px;
+  padding:0;
+
+  border:0;
+  background:none;
+
+  color:var(--burgundy);
+
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+
+  cursor:pointer;
+
+  transition:color .25s ease;
+}
+
+.teacher-language-toggle:hover{
+  color:var(--navy);
+}
+
+.teacher-language-toggle::after{
+  content:"";
+
+  display:block;
+
+  width:100%;
+  height:1px;
+
+  margin-top:4px;
+
+  background:var(--gold);
+}
+
+
+/* =========================================================
+   ARABIC
+   ========================================================= */
+
+.teacher-description[dir="rtl"]{
+  direction:rtl;
+  text-align:right;
+
+  font-family:Arial, "Noto Sans Arabic", sans-serif;
+  line-height:1.9;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:950px){
+
+  .educators-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+
+
+
+ /* =========================================================
+   MISS DAREEN — PORTRAIT IMAGE
+   ========================================================= */
+
+.teacher-photo img.teacher-portrait{
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+  object-position:center;
+
+  display:block;
+  margin:auto;
+
+  background:#eef1f4;
+}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:600px){
+
+  .educators-grid{
+    grid-template-columns:1fr;
+  }
+
+  .teacher-content{
+    padding:22px 20px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MISS DAREEN — PORTRAIT PHOTO
+   ========================================================= */
+
+.teacher-photo img.teacher-portrait{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+
+  transform:scale(1.18);
+  transition:transform .5s ease;
+}
+
+/* Slightly stronger zoom when hovering */
+.teacher-card:hover .teacher-photo img.teacher-portrait{
+  transform:scale(1.23);
+}
+
   </style>
 </head>
 
@@ -1127,7 +1372,7 @@
 
   <!-- =========================================================
        HERO
-       ========================================================= -->
+       ========================================================= 
 
   <section class="staff-hero">
 
@@ -1145,7 +1390,7 @@
 
 
         <h1>
-          The people behind<br>
+          The people behind
           the MAOSS experience.
         </h1>
 
@@ -1159,7 +1404,26 @@
 
     </div>
 
+  </section> -->
+
+   <section class="hero">
+    <div class="hero-media">
+  
+    <img
+        src="./assets/staff.jpg"
+        alt="Maroun Abboud Public High School staff">
+    </div>
+    <div class="hero-inner">
+      <div class="container">
+        <h1>The people behind
+          the MAOSS experience.</h1>
+        <p class="hero-lede"> Meet the educators and school professionals whose knowledge,
+          dedication, and collaboration shape the learning experience
+          of every student at Maroun Abboud Public High School.</p>
+      </div>
+    </div>
   </section>
+
 
 
   <!-- =========================================================
@@ -1438,6 +1702,259 @@
     </div>
 
   </section>
+
+
+  <!-- =========================================================
+     OUR EDUCATORS
+     =================================================================================== -->
+
+<section class="staff-section educators-section">
+
+  <div class="staff-section-inner">
+
+    <div class="section-head">
+
+      <p class="section-eyebrow">
+        Our Educators
+      </p>
+
+      <h2>
+        Meet the people who make learning matter.
+      </h2>
+
+      <p>
+        Our teachers bring knowledge, experience, curiosity, and
+        dedication into the classroom, helping students discover
+        their strengths and grow with confidence.
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         TEACHERS GRID
+         ===================================================== -->
+
+    <div class="educators-grid">
+
+
+
+
+      
+
+
+      <!-- ===================================================
+           GEOGRAPHY TEACHER
+           Arabic version available
+           =================================================== -->
+
+      <article class="teacher-card">
+
+        <div class="teacher-photo">
+
+          <img
+            src="./assets/teachers/MissLayal-geo.png"
+            alt="Geography teacher at Maroun Abboud Public High School"
+          >
+
+        </div>
+
+
+        <div class="teacher-content">
+
+          <p class="teacher-subject">
+            Geography
+          </p>
+
+          <h3 class="teacher-name">
+            Layal Maallawi
+          </h3>
+
+         <p
+  class="teacher-description"
+  data-english="I believe that education moves learners from being recipients of knowledge to becoming discoverers, researchers, and innovators. I am a Geography teacher with 15 years of experience, currently teaching at Maroun Abboud Public High School – Aley and Abadiyeh Public High School, and hold a Master’s degree in Geography from the Lebanese University. My professional development includes a Diploma in Total Quality Management, specialized training in surveying at the Meteorological Department of the Directorate General of Civil Aviation, as well as training in Google Earth Engine, data analysis, and artificial intelligence in education. I integrate GIS, programming, artificial intelligence, and data analysis within STEAM to develop critical thinking, creativity, and problem-solving skills. I received the STEAM Teacher of the Year Award in 2019 and the STEAM Excellence Award in 2025, which gave me the opportunity to participate in BETT London 2026. I have also supervised projects that earned medals at the Science Fair. I believe in continuous learning and in the power of geography to help students understand the world and create meaningful impact."
+
+  data-arabic="أؤمن بأن التعليم الحقيقي يبدأ عندما ينتقل المتعلم من موقع المتلقي للمعرفة إلى موقع المكتشف والباحث وصانع المعرفة والمبتكر. ومن هذا الإيمان، أمارس التعليم منذ أكثر من 15 عامًا، وأسعى إلى تقديم الجغرافيا بوصفها مجالًا حيًا لفهم العالم وتحليل تحوّلاته، وليس مجرد مجموعة من الخرائط والمعلومات. أدرّس حاليًا في ثانوية مارون عبود الرسمية – عاليه وثانوية العبادية الرسمية، وأحمل درجة الماجستير في الجغرافيا من الجامعة اللبنانية – كلية الآداب والعلوم الإنسانية. وقد دعمت مسيرتي الأكاديمية والتربوية بمجموعة من الشهادات والتدريبات المتخصصة، من بينها دبلوم في إدارة الجودة الشاملة، وتدريب متخصص في الاستطلاع في مصلحة الأرصاد الجوية بالمديرية العامة للطيران المدني، وتدريب في Google Earth Engine في برلين، إلى جانب التدريب في تحليل البيانات باستخدام SPSS والذكاء الاصطناعي في التعليم من خلال برنامج AI for Educators. في ممارستي التعليمية، أدمج نظم المعلومات الجغرافية (GIS)، والبرمجة، والذكاء الاصطناعي، وتحليل البيانات والأدوات الرقمية مع منهجيات STEAM، بهدف تحويل المفاهيم الجغرافية إلى تجارب تعلم قائمة على البحث والاستقصاء والتجريب وحل المشكلات. وأحرص على أن يكون المتعلم شريكًا في بناء المعرفة، قادرًا على طرح الأسئلة، وتحليل البيانات، وتوظيف التكنولوجيا، وتحويل الأفكار إلى مشاريع وحلول ذات معنى. وقد تُوّج هذا التوجه بعدد من الإنجازات التربوية والعلمية، من أبرزها الحصول على جائزة STEAM Teacher of the Year على مستوى الشرق الأوسط وشمال أفريقيا عام 2019، ثم STEAM Excellence Award عام 2025، التي أتاحت لي المشاركة في BETT London 2026، أحد أبرز المؤتمرات العالمية في مجال تكنولوجيا التعليم. كما شاركت كأستاذة مشرفة في مباراة العلوم، وحققت المشاريع التي أشرفت عليها ميداليات ذهبية وفضية وبرونزية خلال عامي 2023–2024 و2024–2025. كما أشارك باستمرار في المؤتمرات والفعاليات والمبادرات التربوية في عدد من الجامعات والمؤسسات التعليمية، انطلاقًا من إيماني بأن التعلم المستمر والتطوير المهني ليسا خيارًا، بل أساسًا لممارسة تعليمية قادرة على مواكبة حاجات المستقبل. أؤمن بأن الجغرافيا تمنح المتعلم أدوات لفهم المكان والإنسان والعلاقات التي تشكل عالمنا. لذلك أطمح إلى أن يكون كل درس مساحة للاكتشاف، وكل مشروع فرصة للإبداع، وكل متعلم قادرًا على تحويل المعرفة إلى فكرة، والفكرة إلى أثر."
+
+>
+  I believe that education moves learners from being recipients of knowledge to becoming discoverers, researchers, and innovators. I am a Geography teacher with 15 years of experience, currently teaching at Maroun Abboud Public High School – Aley and Abadiyeh Public High School, and hold a Master’s degree in Geography from the Lebanese University. My professional development includes a Diploma in Total Quality Management, specialized training in surveying at the Meteorological Department of the Directorate General of Civil Aviation, as well as training in Google Earth Engine, data analysis, and artificial intelligence in education. I integrate GIS, programming, artificial intelligence, and data analysis within STEAM to develop critical thinking, creativity, and problem-solving skills. I received the STEAM Teacher of the Year Award in 2019 and the STEAM Excellence Award in 2025, which gave me the opportunity to participate in BETT London 2026. I have also supervised projects that earned medals at the Science Fair. I believe in continuous learning and in the power of geography to help students understand the world and create meaningful impact.
+</p>
+
+
+          <!-- Arabic button ONLY for teachers who provided Arabic -->
+
+          <button
+            class="teacher-language-toggle"
+            type="button"
+            aria-label="Show Arabic description"
+          >
+            العربية
+          </button>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ===================================================
+           CHEMISTRY TEACHER
+           English only — NO Arabic button
+           =================================================== -->
+
+      <article class="teacher-card">
+
+        <div class="teacher-photo">
+
+          <img
+            src="./assets/teachers/MissSanaa-Chem.jpeg"
+            alt="Chemistry teacher at Maroun Abboud Public High School"
+          >
+
+        </div>
+
+
+        <div class="teacher-content">
+
+          <p class="teacher-subject">
+            Chemistry
+          </p>
+
+          <h3 class="teacher-name">
+            Sanaa Sheyayeb
+          </h3>
+
+          <p class="teacher-description">
+
+           Associate Professor in Chemistry at the Lebanese University, Faculty of Sciences, with more than 10 years of experience in chemistry education and research. She teaches undergraduate and graduate courses and contributes to academic supervision and laboratory training. She also works as part-time Chemistry Teacher at MAOS High School. Her professional background combines university teaching, scientific research, international collaborations, and peer-reviewed publications, with expertise in analytical chemistry, materials science, and nanotechnology. She is proficient in English and French and is committed to making chemistry accessible and engaging for students while supporting their scientific curiosity, critical thinking, and academic development.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+       <!-- ===================================================
+           English TEACHER
+           English only — NO Arabic button
+           =================================================== -->
+
+      <article class="teacher-card">
+
+        <div class="teacher-photo">
+
+          <img
+            src="./assets/teachers/MissSumer-Eng.jpeg"
+            alt="English teacher at Maroun Abboud Public High School"
+          >
+
+        </div>
+
+
+        <div class="teacher-content">
+
+          <p class="teacher-subject">
+            English
+          </p>
+
+          <h3 class="teacher-name">
+             Sumer Malaeb
+          </h3>
+
+          <p class="teacher-description">
+A dedicated educator with over 25 years in public high schools and 20+ years at the Lebanese University’s Language Bureau, Sumer Malaeb holds a Diploma of Higher Studies in English Language and Literature. Certified with top band scores on the Cambridge Teaching Knowledge Test (TKT) and committed to ongoing professional workshops, she serves as the English Department Coordinator at Maroun Abboud High School in Aley. Additionally, her background includes prior experience as a Senior Translator at Sleem Translation, along with her work as a co-translator and editor at Iman Malaeb’s Translation office.
+          </p>
+
+        </div>
+
+      </article>
+
+ 
+
+      <!-- ===================================================
+           Economics TEACHER
+           English only — NO Arabic button
+           =================================================== -->
+           
+      <article class="teacher-card">
+
+        <div class="teacher-photo">
+                                                <!-- Here i add class since the photo is vertically so i should to fix it to seem like others-->
+          <img                                
+    class="teacher-portrait"
+    src="./assets/teachers/MissDareen.png" 
+    alt="Economics teacher at Maroun Abboud Public High School"
+  >
+
+        </div>
+
+
+        <div class="teacher-content">
+
+          <p class="teacher-subject">
+            Economics
+          </p>
+
+          <h3 class="teacher-name">
+              Dareen Abdel Khalek
+          </h3>
+
+          <p class="teacher-description">
+            An experienced Economics educator with a strong academic background in International Economics, Banking and Finance, Dareen Abdel Khalek holds a Bachelor’s degree in Economic Sciences from Lebanese University. With extensive teaching experience since 2009, and currently teaching at Maroun Abboud Secondary School, Majdel baana Secondary School and Abdallah el Khoury Secondary School - Hammana. She teaches Economics to Grades 10, 11, and 12, presenting complex economic and financial concepts in a clear and accessible way. Her professional background also includes economics journalism, banking training, and teaching French, Arabic, and Technology.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+            <!-- ===================================================
+           Economics TEACHER
+           English only — NO Arabic button
+           =================================================== -->
+           
+      <article class="teacher-card">
+
+        <div class="teacher-photo">
+                                                <!-- Here i add class since the photo is vertically so i should to fix it to seem like others-->
+          <img                                
+    class="teacher-portrait"
+    src="./assets/teachers/MissDarin-Sociology.jpeg" 
+    alt="Sociology teacher at Maroun Abboud Public High School"
+  >
+
+        </div>
+
+
+        <div class="teacher-content">
+
+          <p class="teacher-subject">
+            Sociology
+          </p>
+
+          <h3 class="teacher-name">
+              Darine El mohtare
+          </h3>
+
+          <p class="teacher-description">
+          Sociology teacher at Hussein Massoud Public High School – Bchamoun, Maroun Abboud Public High School – Aley, and Saint Joseph High School – Shweifat. I avoid rote teaching because, in my opinion, learning is better when students discover the information themselves. I believe that every student has their own way of being creative, and giving students motivation through encouragement, effective communication, and allowing them space to freely express their opinions leads them to success.  
+
+I hold a Master's degree in Family Sociology from the Lebanese University, I am continuing my studies to earn a Master's in School Counseling from the Lebanese University.
+          </p>
+
+        </div>
+
+      </article>
+      
+
+
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- =========================================================
